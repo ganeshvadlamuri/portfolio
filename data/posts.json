@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "about-ganesh",
+    "title": "About Ganesh Vadlamuri",
+    "date": "2025-11-10",
+    "featured": true,
+    "comments": 0,
+    "categories": ["Featured", "About"],
+    "img": "assets/hero-hacker.svg",
+    "excerpt": "Senior Software Engineer focused on fraud detection, cloud modernization, and secure systems. Previously at Texas State, AWS, KSR Marine Exports, and GNR Health Care.",
+    "content": "## Brief Summary\n\nI build reliable, secure software and data systems with a strong focus on cloud modernization, observability, and automation. I currently work on fraud detection at Wells Fargo, modernizing platforms and services for OpenShift and GCP.\n\n### Highlights\n- Modernized microservices: Java 11 to 17, Spring Boot 3.x; PCF to OpenShift migration, containerization best practices.\n- Strengthened security: addressed critical vulnerabilities; improved CI/CD (Jenkins, Artifactory, Docker); BDD with Cucumber/Gherkin.\n- Event-driven systems: Kafka + MongoDB/OracleDB; proactive observability with Splunk dashboards/alerts.\n- GenAI PoC to explore anomaly detection and fraud analytics.\n\n### Prior Experience\n- Texas State University: services and UIs (Java/Spring Boot, Angular/React); AWS (EC2, RDS, S3), Terraform; Docker/Kubernetes; analytics and dashboards (Tableau/Power BI).\n- AWS (Cloud Engineer): secure, scalable AWS solutions; automation with Python, AWS CLI, Terraform.\n- KSR Marine Exports: REST APIs, ETL (AWS Glue/Azure Data Factory), dashboards, CI/CD with Jenkins/UCD, Splunk monitoring.\n- GNR Health Care: data engineering for claims and billing; ETL with Python/SQL; KPI dashboards; HIPAA-aware workflows and reporting automation.\n\n### Core Skills\nJava, Spring Boot, Microservices, REST, Kafka, Docker, Kubernetes, OpenShift, GCP, AWS, Terraform, Jenkins, Artifactory, MongoDB, Oracle, SQL, Splunk, BDD (Cucumber/Gherkin)."
+  },
+  {
+    "slug": "problems-to-solve",
+    "title": "I don't think we will ever run out of problems to solve",
+    "date": "2020-05-02",
+    "featured": true,
+    "comments": 1,
+    "categories": ["Featured"],
+    "img": "assets/hero-hacker.svg",
+    "excerpt": "A short note on AI and deep learning being applied to payment security challenges.",
+    "content": "# I don't think we will ever run out of problems to solve\n\nGot a chance to do a campaign video with experts on applying AI and deep learning to payment security challenges. The space keeps evolving — and so do the attacks.\n\n- Defense-in-depth still matters\n- Telemetry and visibility are key\n- Teams > tools\n\n[Continue the conversation](https://example.com)"
+  },
+  {
+    "slug": "ise-award-2017",
+    "title": "Winner of 2017 Information Security Executive Award",
+    "date": "2017-08-27",
+    "categories": ["TechNews"],
+    "img": "assets/award.jpg",
+    "excerpt": "Honored and privileged to be chosen as ISE of the Year 2017 - ceremony at the Westin St. Francis, San Francisco.",
+    "content": "# Information Security Executive Award\n\nIt was a privilege to be recognized among an incredible peer group. Gratitude to the mentors, teammates, and community that made it possible."
+  },
+  {
+    "slug": "security-shark-tank",
+    "title": "Participating in Security Shark Tank with Robert Herjavec and CISOs",
+    "date": "2016-11-17",
+    "categories": ["TechNews"],
+    "img": "assets/sharktank.jpg",
+    "excerpt": "Serving as a 'Shark' during RSA week and takeaways from rapid-fire vendor pitches.",
+    "content": "## Security Shark Tank notes\n\nFast pitches. Faster follow-ups. A reminder that clear problem definition beats feature lists."
+  },
+  {
+    "slug": "global-big-data-2016",
+    "title": "Speaking at Global Big Data Conference 2016",
+    "date": "2016-11-12",
+    "categories": ["TechNews"],
+    "img": "assets/bigdata.jpg",
+    "excerpt": "Securing Apache Kafka - notes, links, and interview.",
+    "content": "### Securing Apache Kafka\n\nField notes from hardening Kafka clusters at scale: network segmentation, authz/authn, encryption in transit, and sensible defaults."
+  }
+]
+

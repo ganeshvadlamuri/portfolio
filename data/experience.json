@@ -1,0 +1,52 @@
+[
+  {
+    "company": "Wells Fargo",
+    "role": "Senior Software Engineer",
+    "type": "Full-time",
+    "location": "Charlotte, North Carolina, United States",
+    "workMode": "Hybrid",
+    "start": "2024-12-01",
+    "end": null,
+    "logo": "assets/logos/wells-fargo.svg"
+  },
+  {
+    "company": "Texas State University",
+    "role": "Graduate Assistant",
+    "type": "",
+    "location": "San Marcos, Texas, United States",
+    "workMode": "On-site",
+    "start": "2022-08-01",
+    "end": "2024-05-01",
+    "logo": "assets/logos/txst.svg"
+  },
+  {
+    "company": "Amazon Web Services (AWS)",
+    "role": "Cloud Engineer",
+    "type": "Full-time",
+    "location": "India",
+    "workMode": "Remote",
+    "start": "2022-03-01",
+    "end": "2022-05-31",
+    "logo": "assets/logos/aws.svg"
+  },
+  {
+    "company": "KSR MARINE EXPORTS",
+    "role": "Software Engineer",
+    "type": "Full-time",
+    "location": "Andhra Pradesh, India",
+    "workMode": "Hybrid",
+    "start": "2021-01-01",
+    "end": "2022-02-28",
+    "logo": "assets/logos/ksr.svg"
+  },
+  {
+    "company": "GNR Health Care",
+    "role": "Software Engineer - Data Systems",
+    "type": "Full-time",
+    "location": "Andhra Pradesh, India",
+    "workMode": "Hybrid",
+    "start": "2018-08-01",
+    "end": "2020-12-31",
+    "logo": "assets/logos/gnr.svg"
+  }
+]
