@@ -15,8 +15,9 @@ a:hover{text-decoration:underline}
 .brand h1{font-size:32px;line-height:1.2;margin:0}
 .brand .tagline{color:var(--muted);margin-top:6px}
 /* Name + avatar row */
-.brand-row{display:flex;align-items:center;gap:12px;justify-content:flex-start}
-.brand-pfp{width:40px;height:40px;border-radius:999px;border:1px solid var(--border);object-fit:cover}
+.brand-row{display:flex;align-items:center;gap:22px;justify-content:flex-start;flex-wrap:wrap}
+.brand-pfp{width:180px;height:180px;border-radius:999px;border:1px solid var(--border);object-fit:cover;flex-shrink:0}
+.brand-text{display:flex;flex-direction:column;gap:6px}
 
 /* keep nav on the right while brand is centered */
 nav{position:static}
@@ -44,8 +45,8 @@ main{display:grid;grid-template-columns:1fr 320px;gap:32px;margin-top:22px}
 .side h3{margin:0 0 12px 0;font-size:18px}
 .list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .list a{color:var(--ink-soft)}
-.profile{display:flex;gap:12px;align-items:center}
-.pfp{width:48px;height:48px;border-radius:999px;object-fit:cover;border:1px solid var(--border)}
+.profile{display:flex;gap:14px;align-items:center}
+.pfp{width:64px;height:64px;border-radius:999px;object-fit:cover;border:1px solid var(--border)}
 
 /* Footer */
 footer{margin:48px 0 20px;color:var(--muted);font-size:14px;text-align:center}
@@ -76,3 +77,15 @@ code{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono
 .xp-company{color:var(--ink-soft)}
 .xp-meta{color:var(--muted);font-size:13px}
 .xp-small{color:var(--muted);font-size:12px}
+
+/* About hero styling */
+.about-card{border:1px solid #19243a; background:radial-gradient(circle at 20% 20%, rgba(34,197,94,0.08), transparent 35%), #0f1520;}
+.about-hero{position:relative;width:100%;border:1px solid #1f2a3a;border-radius:12px;padding:28px;margin-bottom:14px;overflow:hidden;background:radial-gradient(circle at 30% 20%, #0b192d, #0b111a 55%);}
+.about-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);background-size:22px 22px;opacity:0.3;}
+.about-hero-glow{position:absolute;inset:0;background:radial-gradient(circle at 40% 40%, rgba(34,197,94,0.14), transparent 45%);mix-blend-mode:screen;}
+.about-chips{position:relative;display:flex;flex-wrap:wrap;gap:8px}
+.about-chips span{display:inline-flex;align-items:center;border:1px solid #1f2a3a;border-radius:999px;padding:6px 10px;font-size:12px;color:#a7f3d0;background:rgba(34,197,94,0.08);text-transform:uppercase;letter-spacing:0.02em}
+
+/* Chips (certifications) */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;border:1px solid #1f2a3a;border-radius:999px;padding:6px 10px;font-size:12px;color:#a7f3d0;background:rgba(34,197,94,0.08)}
