@@ -9,9 +9,7 @@ async function load() {
       const el = document.createElement('article');
       el.className = 'post' + (p.slug === 'about-ganesh' ? ' about-card' : '');
       const link = `post.html?slug=${encodeURIComponent(p.slug)}`;
-      const heroBlock = p.slug === 'about-ganesh'
-        ? `<div class="about-hero"><div class="about-hero-grid"></div><div class="about-hero-glow"></div><div class="about-chips"><span>Security</span><span>Cloud</span><span>AppSec</span><span>Fraud</span></div></div>`
-        : (p.img ? `<a href="${link}"><img class="hero" src="${p.img}" alt="${p.title}" onerror="this.onerror=null;this.src='assets/hero-hacker.svg'"></a>` : '');
+      const heroBlock = ''; // no images on homepage cards
       el.innerHTML = `
         <div class="meta">
           <img src="assets/profile.jpg" alt="Ganesh Vadlamuri avatar" class="pfp" style="width:36px;height:36px">
