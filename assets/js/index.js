@@ -7,11 +7,14 @@ async function load() {
     // Render posts
     posts.forEach(p => {
       const el = document.createElement('article');
-      el.className = 'post';
+      el.className = 'post' + (p.slug === 'about-ganesh' ? ' about-card' : '');
       const link = `post.html?slug=${encodeURIComponent(p.slug)}`;
+      const heroBlock = p.slug === 'about-ganesh'
+        ? `<div class="about-hero"><div class="about-hero-grid"></div><div class="about-hero-glow"></div><div class="about-chips"><span>Security</span><span>Cloud</span><span>AppSec</span><span>Fraud</span></div></div>`
+        : (p.img ? `<a href="${link}"><img class="hero" src="${p.img}" alt="${p.title}" onerror="this.onerror=null;this.src='assets/hero-hacker.svg'"></a>` : '');
       el.innerHTML = `
         <div class="meta">
-          <img src="assets/hero-hacker.svg" alt="Ganesh Vadlamuri avatar" class="pfp" style="width:36px;height:36px">
+          <img src="assets/profile.jpg" alt="Ganesh Vadlamuri avatar" class="pfp" style="width:36px;height:36px">
           <strong>Ganesh Vadlamuri</strong>
           <span class="sep">&middot;</span>
           <span>${new Date(p.date).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'})}</span>
@@ -19,7 +22,7 @@ async function load() {
           <span class="sep">&middot;</span>
           <span>${p.comments ?? 0} Comment${(p.comments||0)===1?'':'s'}</span>
         </div>
-        ${p.img ? `<a href="${link}"><img class="hero" src="${p.img}" alt="${p.title}" onerror="this.onerror=null;this.src='assets/hero-hacker.svg'"></a>` : ''}
+        ${heroBlock}
         <h2><a href="${link}">${p.title}</a></h2>
         <p>${p.excerpt||''}</p>
         <a class="btn" href="${link}">CONTINUE READING</a>
@@ -31,8 +34,9 @@ async function load() {
     const set = new Set();
     posts.forEach(p => (p.categories||[]).forEach(c=>set.add(c)));
     [...set].sort().forEach(c => {
+      const href = c.toLowerCase() === 'about' ? 'post.html?slug=about-ganesh' : '#';
       const li = document.createElement('li');
-      li.innerHTML = `<a href="#">${c}</a>`;
+      li.innerHTML = `<a href="${href}">${c}</a>`;
       catsEl.appendChild(li);
     });
   } catch(err){
@@ -61,6 +65,24 @@ document.addEventListener('DOMContentLoaded', async ()=>{
       list.appendChild(li);
     });
   }catch(err){ console.error(err); }
+});
+
+// Certifications (mock list) in sidebar if present
+document.addEventListener('DOMContentLoaded', ()=>{
+  const el = document.getElementById('certs');
+  if(!el) return;
+  const certs = [
+    'Google Cloud – Professional Cloud Architect',
+    'AWS – Solutions Architect Associate',
+    'Certified Kubernetes Administrator (CKA)',
+    'OSCP (Offensive Security Certified Professional)'
+  ];
+  certs.forEach(c => {
+    const span = document.createElement('span');
+    span.className = 'chip';
+    span.textContent = c;
+    el.appendChild(span);
+  });
 });
 
 // Helpers with offline fallback when opening via file://

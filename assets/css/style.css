@@ -10,14 +10,19 @@ a:hover{text-decoration:underline}
 .wrap.narrow{max-width:860px}
 
 /* Topbar */
-.topbar{display:flex;gap:20px;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--border);padding-bottom:16px}
-.brand{margin:0;text-align:left}
+.topbar{display:flex;gap:16px;align-items:flex-start;justify-content:flex-start;border-bottom:1px solid var(--border);padding-bottom:12px;flex-wrap:wrap}
+.brand{margin:0;text-align:left;display:flex;flex:1;min-width:340px}
 .brand h1{font-size:32px;line-height:1.2;margin:0}
 .brand .tagline{color:var(--muted);margin-top:6px}
 /* Name + avatar row */
-.brand-row{display:flex;align-items:center;gap:22px;justify-content:flex-start;flex-wrap:wrap}
-.brand-pfp{width:180px;height:180px;border-radius:999px;border:1px solid var(--border);object-fit:cover;flex-shrink:0}
-.brand-text{display:flex;flex-direction:column;gap:6px}
+.brand-row{display:flex;align-items:flex-start;gap:18px;justify-content:flex-start;flex-wrap:wrap;width:100%}
+.brand-pfp{width:120px;height:120px;border-radius:999px;border:1px solid var(--border);object-fit:cover;flex-shrink:0}
+.brand-text{display:flex;flex-direction:column;gap:8px;flex:1;min-width:220px}
+.brand-text nav{margin-top:10px}
+.nav-bar{border:1px solid #1f2a3a;border-radius:14px;padding:10px 14px;background:rgba(15,21,32,0.9);box-shadow:0 8px 20px rgba(0,0,0,0.25);display:flex;align-items:center;margin-left:auto}
+.nav-bar ul{align-items:center}
+.nav-bar a{font-weight:700;color:#d9e1ee}
+.nav-bar a:hover{text-decoration:none;color:#a7f3d0}
 
 /* keep nav on the right while brand is centered */
 nav{position:static}
@@ -85,7 +90,3 @@ code{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono
 .about-hero-glow{position:absolute;inset:0;background:radial-gradient(circle at 40% 40%, rgba(34,197,94,0.14), transparent 45%);mix-blend-mode:screen;}
 .about-chips{position:relative;display:flex;flex-wrap:wrap;gap:8px}
 .about-chips span{display:inline-flex;align-items:center;border:1px solid #1f2a3a;border-radius:999px;padding:6px 10px;font-size:12px;color:#a7f3d0;background:rgba(34,197,94,0.08);text-transform:uppercase;letter-spacing:0.02em}
-
-/* Chips (certifications) */
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{display:inline-flex;align-items:center;border:1px solid #1f2a3a;border-radius:999px;padding:6px 10px;font-size:12px;color:#a7f3d0;background:rgba(34,197,94,0.08)}
