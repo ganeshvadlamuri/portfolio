@@ -1,0 +1,102 @@
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .wrap { padding: 12px; }
+  
+  .topbar {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 16px 0;
+  }
+  
+  .brand { min-width: auto; }
+  
+  .brand-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .brand-pfp {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .brand h1 {
+    font-size: 22px;
+    margin: 8px 0;
+  }
+  
+  .brand .tagline {
+    font-size: 13px;
+    margin-top: 4px;
+  }
+  
+  .nav-bar {
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    padding: 8px 12px;
+  }
+  
+  .nav-bar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .nav-bar a {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+  
+  main {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 12px;
+  }
+  
+  .post {
+    padding: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .post h2 {
+    font-size: 20px;
+  }
+  
+  .side .card {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .profile {
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .pfp {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .pattern-binary {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap { padding: 8px; }
+  
+  .brand h1 { font-size: 18px; }
+  
+  .brand .tagline { font-size: 12px; }
+  
+  .nav-bar ul { gap: 8px; }
+  
+  .nav-bar a { font-size: 13px; }
+  
+  .post { padding: 8px; }
+  
+  .side .card { padding: 8px; }
+}
