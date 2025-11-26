@@ -679,6 +679,11 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize immediately
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    new LiveFunFacts();
+  });
+} else {
   new LiveFunFacts();
-});
+}
