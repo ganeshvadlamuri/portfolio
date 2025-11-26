@@ -1,13 +1,14 @@
 User-agent: *
 Allow: /
+
+# Security
+User-agent: *
+Disallow: /assets/js/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Sitemap
 Sitemap: https://ganeshvadlamuri.github.io/sitemap.xml
 
-# Allow all search engines to crawl
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
+# Security contact
+# See /.well-known/security.txt for security reporting

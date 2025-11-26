@@ -245,16 +245,28 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .projects-carousel { 
-    padding: 16px; 
-    max-width: 100%; 
+    padding: 16px 12px; 
+    max-width: calc(100vw - 2rem);
+    margin: 0 auto;
   }
   .carousel-nav { 
     display: none; 
+  }
+  .project-card {
+    padding: 20px 16px;
+    min-width: calc(100vw - 4rem);
+    width: calc(100vw - 4rem);
   }
 }
 
 @media (max-width: 480px) {
   .projects-carousel { 
-    padding: 12px; 
+    padding: 12px 8px;
+    max-width: calc(100vw - 1rem);
+  }
+  .project-card {
+    padding: 16px 12px;
+    min-width: calc(100vw - 2rem);
+    width: calc(100vw - 2rem);
   }
 }
