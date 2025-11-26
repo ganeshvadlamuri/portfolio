@@ -9,47 +9,8 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/mobile.css" />
-  
-  <!-- SEO Meta Tags -->
-  <meta name="keywords" content="Ganesh Vadlamuri, cybersecurity expert, information security architect, penetration tester, application security, cloud security, vulnerability assessment, security consultant, ethical hacker, CISSP, CEH" />
-  <meta name="author" content="Ganesh Vadlamuri" />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <link rel="canonical" href="https://ganeshvadlamuri.github.io/" />
-  
-  <!-- Open Graph Tags -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ganeshvadlamuri.github.io/" />
-  <meta property="og:title" content="Ganesh Vadlamuri - Cybersecurity Expert" />
-  <meta property="og:description" content="Leading expert in cybersecurity, penetration testing, and security architecture." />
-  <meta property="og:image" content="https://ganeshvadlamuri.github.io/assets/profile.jpg" />
-  
-  <!-- Twitter Card Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:creator" content="@ganeshxploit" />
-  <meta name="twitter:title" content="Ganesh Vadlamuri - Cybersecurity Expert" />
-  <meta name="twitter:description" content="Leading expert in cybersecurity, penetration testing, and security architecture." />
-  <meta name="twitter:image" content="https://ganeshvadlamuri.github.io/assets/profile.jpg" />
-  
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Ganesh Vadlamuri",
-    "jobTitle": "Information Security Architect",
-    "description": "Leading cybersecurity expert specializing in Information Security, Penetration Testing, Application Security, and Cloud Security",
-    "url": "https://ganeshvadlamuri.github.io",
-    "image": "https://ganeshvadlamuri.github.io/assets/profile.jpg",
-    "sameAs": [
-      "https://linkedin.com/in/ganeshvadlamuri",
-      "https://github.com/ganeshvadlamuri",
-      "https://x.com/ganeshxploit"
-    ],
-    "knowsAbout": ["Cybersecurity", "Information Security", "Application Security", "Cloud Security", "Penetration Testing", "Vulnerability Assessment"],
-    "telephone": "+15126653074",
-    "email": "ganeshvadlamuri.root@gmail.com"
-  }
-  </script>
+  <link rel="stylesheet" href="assets/css/projects.css" />
+  <link rel="stylesheet" href="assets/css/top-row.css" />
 </head>
 <body>
   <div class="wrap">
@@ -58,9 +19,15 @@
         <div class="brand-row">
           <img class="brand-pfp" src="assets/profile.jpg" alt="Ganesh Vadlamuri avatar">
           <div class="brand-text">
+            <div class="pattern-binary" aria-hidden="true">
+              <div class="bit bit1">0101010011010011011010011010011010101001101001101101001101001101010100110100110110100110100110101010011010011011010011010011010101</div>
+              <div class="bit bit2">1101001100101010101100101010011010010101011001010100110100101010110010101001101001010101100101010011010010101011001010100</div>
+              <div class="bit bit3">0011010011011010011010011010101001101001101101001101001101010100110100110110100110100110101010011010011011010011010011010</div>
+              <div class="bit bit4">1010011010010110100110100110101001101001101101001101001101010100110100110110100110100110101010011010011011010011010011010</div>
+            </div>
             <h1>Ganesh Vadlamuri</h1>
             <div class="tagline">Information Security & Technology</div>
-            <div class="tagline">Build it right. Secure it better.</div>
+            <div class="tagline">�Build it right. Secure it better.�</div>
           </div>
           <nav class="nav-bar">
             <ul>
@@ -74,12 +41,12 @@
       </div>
     </div>
 
-    <!-- Ambient binary pattern -->
-    <div class="pattern-binary" aria-hidden="true">
-      <div class="bit bit1">0101010011010011011010011010011010101001101001101101001101001101010100110100110110100110100110101010011010011011010011010011010101</div>
-      <div class="bit bit2">1101001100101010101100101010011010010101011001010100110100101010110010101001101001010101100101010011010010101011001010100</div>
-      <div class="bit bit3">0011010011011010011010011010101001101001101101001101001101010100110100110110100110100110101010011010011011010011010011010</div>
-      <div class="bit bit4">1010011010010110100110100110101001101001101101001101001101010100110100110110100110100110101010011010011011010011010011010</div>
+    <div class="top-row">
+      <div id="projects-container"></div>
+      <div class="card" id="cats-card-top">
+        <h3 class="uline">Categories</h3>
+        <ul class="list" id="cats-top"></ul>
+      </div>
     </div>
 
     <main>
@@ -88,10 +55,6 @@
 
       <!-- Sidebar -->
       <aside class="side">
-        <div class="card">
-          <h3 class="uline">Categories</h3>
-          <ul class="list" id="cats"></ul>
-        </div>
         <div class="card" id="contact">
           <h3 class="uline">Connect with Me</h3>
           <div class="profile" style="margin:10px 0 16px 0">
@@ -135,7 +98,7 @@
     </footer>
   </div>
 
+  <script src="assets/js/projects.js"></script>
   <script src="assets/js/index.js" defer></script>
 </body>
 </html>
-

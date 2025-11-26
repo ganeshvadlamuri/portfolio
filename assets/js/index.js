@@ -1,6 +1,6 @@
 async function load() {
   const feed = document.getElementById('feed');
-  const catsEl = document.getElementById('cats');
+  const catEls = Array.from(document.querySelectorAll('#cats, #cats-top')).filter(Boolean);
   try{
     const posts = await getPosts();
 
@@ -29,14 +29,16 @@ async function load() {
     });
 
     // Categories from posts
-    const set = new Set();
-    posts.forEach(p => (p.categories||[]).forEach(c=>set.add(c)));
-    [...set].sort().forEach(c => {
-      const href = c.toLowerCase() === 'about' ? 'post.html?slug=about-ganesh' : '#';
-      const li = document.createElement('li');
-      li.innerHTML = `<a href="${href}">${c}</a>`;
-      catsEl.appendChild(li);
-    });
+    if(catEls.length){
+      const set = new Set();
+      posts.forEach(p => (p.categories||[]).forEach(c=>set.add(c)));
+      [...set].sort().forEach(c => {
+        const href = c.toLowerCase() === 'about' ? 'post.html?slug=about-ganesh' : '#';
+        const li = document.createElement('li');
+        li.innerHTML = `<a href="${href}">${c}</a>`;
+        catEls.forEach(el => el.appendChild(li.cloneNode(true)));
+      });
+    }
   } catch(err){
     feed.innerHTML = '<p style="color:#ef4444">Failed to load posts.</p>';
     console.error(err);
