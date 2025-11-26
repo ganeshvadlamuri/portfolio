@@ -2,51 +2,51 @@
   {
     "company": "Wells Fargo",
     "role": "Senior Software Engineer",
-    "type": "Full-time",
-    "location": "Charlotte, North Carolina, United States",
-    "workMode": "Hybrid",
+    "location": "Charlotte, North Carolina",
     "start": "2024-12-01",
     "end": null,
-    "logo": "assets/logos/wells-fargo.svg"
+    "logo": "https://logo.clearbit.com/wellsfargo.com",
+    "description": "Leading fraud detection modernization with OpenShift, GCP, Java 17, Spring Boot 3.x, Kafka, and GenAI PoC.",
+    "technologies": ["Java 17", "Spring Boot 3.x", "OpenShift", "GCP", "Kafka", "MongoDB", "Oracle", "Docker", "Jenkins", "Splunk", "GenAI"]
   },
   {
     "company": "Texas State University",
-    "role": "Graduate Assistant",
-    "type": "",
-    "location": "San Marcos, Texas, United States",
-    "workMode": "On-site",
+    "role": "Graduate Software Engineer",
+    "location": "San Marcos, Texas",
     "start": "2022-08-01",
     "end": "2024-05-01",
-    "logo": "assets/logos/txst.svg"
+    "logo": "https://logo.clearbit.com/txstate.edu",
+    "description": "Developed university systems with Java, Spring Boot, Angular, React. Managed AWS infrastructure and created analytics dashboards.",
+    "technologies": ["Java", "Spring Boot", "Angular", "React", "AWS", "Terraform", "Docker", "Kubernetes", "MySQL", "PostgreSQL", "Tableau", "Power BI"]
   },
   {
-    "company": "Amazon Web Services (AWS)",
+    "company": "Amazon Web Services",
     "role": "Cloud Engineer",
-    "type": "Full-time",
-    "location": "India",
-    "workMode": "Remote",
+    "location": "Remote, India",
     "start": "2022-03-01",
-    "end": "2022-05-31",
-    "logo": "assets/logos/aws.svg"
+    "end": "2022-05-01",
+    "logo": "https://logo.clearbit.com/aws.amazon.com",
+    "description": "Designed scalable cloud solutions on AWS with focus on security, automation using Python, and Infrastructure as Code with Terraform.",
+    "technologies": ["AWS", "EC2", "S3", "RDS", "CloudWatch", "Python", "Terraform", "Bash", "CI/CD"]
   },
   {
-    "company": "KSR MARINE EXPORTS",
+    "company": "KSR Marine Exports",
     "role": "Software Engineer",
-    "type": "Full-time",
     "location": "Andhra Pradesh, India",
-    "workMode": "Hybrid",
     "start": "2021-01-01",
-    "end": "2022-02-28",
-    "logo": "assets/logos/ksr.svg"
+    "end": "2022-02-01",
+    "logo": "https://via.placeholder.com/40/22c55e/000?text=KSR",
+    "description": "Built RESTful APIs, ETL pipelines with AWS Glue and Azure Data Factory. Created dashboards in Tableau and Power BI.",
+    "technologies": ["Java", "Python", "PostgreSQL", "AWS S3", "AWS Glue", "Azure Data Factory", "Tableau", "Power BI", "Jenkins", "Splunk"]
   },
   {
     "company": "GNR Health Care",
     "role": "Software Engineer - Data Systems",
-    "type": "Full-time",
     "location": "Andhra Pradesh, India",
-    "workMode": "Hybrid",
     "start": "2018-08-01",
-    "end": "2020-12-31",
-    "logo": "assets/logos/gnr.svg"
+    "end": "2020-12-01",
+    "logo": "https://via.placeholder.com/40/22c55e/000?text=GNR",
+    "description": "Designed HIPAA-compliant ETL pipelines for healthcare data. Built dashboards tracking billing and claims KPIs, reducing report time by 30%.",
+    "technologies": ["Python", "SQL", "Pandas", "Power BI", "Tableau", "MySQL", "PostgreSQL", "Jenkins", "Splunk", "AWS S3"]
   }
 ]

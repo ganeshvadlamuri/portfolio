@@ -110,12 +110,23 @@ document.addEventListener('DOMContentLoaded', async () => {
       const range = formatDateRange(xp.start, xp.end);
       const div = document.createElement('div');
       div.className = 'xp-item';
+      
+      const logos = {
+        'Wells Fargo': 'https://logo.clearbit.com/wellsfargo.com',
+        'Texas State University': 'https://logo.clearbit.com/txstate.edu',
+        'Amazon Web Services': 'https://logo.clearbit.com/aws.amazon.com',
+        'KSR Marine Exports': 'https://via.placeholder.com/40/22c55e/000?text=KSR',
+        'GNR Health Care': 'https://via.placeholder.com/40/22c55e/000?text=GNR'
+      };
+      
       div.innerHTML = `
-        <a href="experience.html" aria-label="${xp.role} at ${xp.company}">
+        <img src="${xp.logo || logos[xp.company] || 'https://via.placeholder.com/40'}" alt="${xp.company}" class="xp-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'">
+        <span class="xp-fallback" style="display:none">${xp.company.charAt(0)}</span>
+        <div class="xp-body">
           <div class="xp-role">${escapeHtml(xp.role)}</div>
           <div class="xp-company">${escapeHtml(xp.company)}</div>
-        </a>
-        <div class="xp-small">${range}</div>
+          <div class="xp-meta">${range}</div>
+        </div>
       `;
       fragment.appendChild(div);
     });
@@ -141,10 +152,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!el) return;
   
   const certs = [
-    'Google Cloud Professional Architect',
-    'AWS Solutions Architect Associate', 
-    'Certified Kubernetes Administrator',
-    'OSCP Security Professional'
+    'Google Cloud Digital Leader',
+    'Google Gen AI Certified',
+    'AWS Cloud Architecting',
+    'HackerRank Python & SQL'
   ];
   
   const fragment = document.createDocumentFragment();
@@ -232,9 +243,19 @@ async function getExperience() {
   } catch(e) {
     if (location.protocol === 'file:') {
       console.warn('Using fallback experience for file:// preview');
+      const logos = {
+        'Wells Fargo': 'https://logo.clearbit.com/wellsfargo.com',
+        'Texas State University': 'https://logo.clearbit.com/txstate.edu',
+        'Amazon Web Services': 'https://logo.clearbit.com/aws.amazon.com',
+        'KSR Marine Exports': 'https://via.placeholder.com/40/22c55e/000?text=KSR',
+        'GNR Health Care': 'https://via.placeholder.com/40/22c55e/000?text=GNR'
+      };
       return [
-        { company: 'Wells Fargo', role: 'Senior Software Engineer', start: '2024-12-01', end: null },
-        { company: 'Texas State University', role: 'Graduate Assistant', start: '2022-08-01', end: '2024-05-01' }
+        { company: 'Wells Fargo', role: 'Senior Software Engineer', start: '2024-12-01', end: null, logo: logos['Wells Fargo'] },
+        { company: 'Texas State University', role: 'Graduate Software Engineer', start: '2022-08-01', end: '2024-05-01', logo: logos['Texas State University'] },
+        { company: 'Amazon Web Services', role: 'Cloud Engineer', start: '2022-03-01', end: '2022-05-01', logo: logos['Amazon Web Services'] },
+        { company: 'KSR Marine Exports', role: 'Software Engineer', start: '2021-01-01', end: '2022-02-01', logo: logos['KSR Marine Exports'] },
+        { company: 'GNR Health Care', role: 'Software Engineer', start: '2018-08-01', end: '2020-12-01', logo: logos['GNR Health Care'] }
       ];
     }
     throw new Error(`Failed to load experience: ${e.message}`);

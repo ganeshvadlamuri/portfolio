@@ -80,8 +80,8 @@
         
 
         
-        <h2 class="hero-title">Cybersecurity Expert & Security Architect</h2>
-        <p class="hero-subtitle">Protecting digital assets through innovative security solutions, penetration testing, and robust architecture design. Specialized in application security and cloud security frameworks.</p>
+        <h2 class="hero-title">Senior Software Engineer | Cloud & AI Specialist</h2>
+        <p class="hero-subtitle">6 years of expertise in designing scalable web applications using Java, Spring Boot, and cloud platforms (AWS, Azure, GCP). Specializing in fraud detection, microservices architecture, and Generative AI integration. Currently modernizing critical systems at Wells Fargo.</p>
         
         <div class="hero-cta">
           <a href="#contact" class="cta-primary">Get In Touch</a>
@@ -94,10 +94,49 @@
     </section>
 
     <!-- Skills Section -->
-    <section style="margin: 0.5rem 0 1.5rem 0;">
-      <h3 class="uline" style="text-align: center; margin-bottom: 1.5rem;">Core Expertise</h3>
-      <div class="skills-grid" id="skills-container"></div>
+    <section style="margin: 2rem 0;">
+      <h3 class="uline" style="text-align: center; margin-bottom: 1.5rem;">Technical Skills</h3>
+      <div id="skills-container" style="max-width: 900px; margin: 0 auto;"></div>
     </section>
+    
+    <script>
+    (async function() {
+      const container = document.getElementById('skills-container');
+      if (!container) return;
+      
+      const res = await fetch('./data/skills.json');
+      const skillsData = await res.json();
+      
+      skillsData.forEach((cat, i) => {
+        const acc = document.createElement('div');
+        acc.style.cssText = 'background:var(--panel);border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden';
+        
+        const hdr = document.createElement('div');
+        hdr.style.cssText = 'display:flex;justify-content:space-between;padding:16px 20px;cursor:pointer;font-weight:600;user-select:none';
+        hdr.innerHTML = `<span>${cat.category}</span><span style="color:var(--accent)">${i===0?'▲':'▼'}</span>`;
+        
+        const cnt = document.createElement('div');
+        cnt.style.cssText = `padding:0 20px 16px;display:${i===0?'block':'none'};gap:12px`;
+        
+        cat.skills.forEach(s => {
+          const d = document.createElement('div');
+          d.style.marginBottom = '12px';
+          d.innerHTML = `<div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px"><span>${s.name}</span><span style="color:var(--accent);font-weight:600">${s.level}%</span></div><div style="height:6px;background:var(--border);border-radius:3px;overflow:hidden"><div style="height:100%;background:linear-gradient(90deg,var(--accent),#16a34a);width:${s.level}%;transition:width 1s"></div></div>`;
+          cnt.appendChild(d);
+        });
+        
+        hdr.onclick = () => {
+          const open = cnt.style.display === 'block';
+          cnt.style.display = open ? 'none' : 'block';
+          hdr.querySelector('span:last-child').textContent = open ? '▼' : '▲';
+        };
+        
+        acc.appendChild(hdr);
+        acc.appendChild(cnt);
+        container.appendChild(acc);
+      });
+    })();
+    </script>
 
     <main>
       <!-- Feed -->
@@ -158,7 +197,6 @@
     </footer>
   </div>
 
-  <script src="assets/js/seo-schema.js"></script>
   <script src="assets/js/optimized-loader.js"></script>
   <script src="assets/js/konami.js"></script>
   <script src="assets/js/cursor-trail.js"></script>

@@ -1,0 +1,74 @@
+[
+  {
+    "category": "Programming Languages",
+    "skills": [
+      {"name": "Java", "level": 95},
+      {"name": "Python", "level": 90},
+      {"name": "SQL", "level": 92},
+      {"name": "JavaScript", "level": 85},
+      {"name": "TypeScript", "level": 82},
+      {"name": "C++", "level": 75}
+    ]
+  },
+  {
+    "category": "Cloud Platforms",
+    "skills": [
+      {"name": "AWS", "level": 90},
+      {"name": "Azure", "level": 85},
+      {"name": "GCP", "level": 88},
+      {"name": "OpenShift", "level": 85}
+    ]
+  },
+  {
+    "category": "Databases",
+    "skills": [
+      {"name": "MySQL", "level": 90},
+      {"name": "PostgreSQL", "level": 88},
+      {"name": "MongoDB", "level": 85},
+      {"name": "Oracle", "level": 82},
+      {"name": "Redis", "level": 80},
+      {"name": "Snowflake", "level": 75}
+    ]
+  },
+  {
+    "category": "DevOps & CI/CD",
+    "skills": [
+      {"name": "Jenkins", "level": 92},
+      {"name": "Docker", "level": 90},
+      {"name": "Kubernetes", "level": 88},
+      {"name": "Terraform", "level": 85},
+      {"name": "ArgoCD", "level": 80},
+      {"name": "GitLab CI/CD", "level": 82}
+    ]
+  },
+  {
+    "category": "Frameworks & Tools",
+    "skills": [
+      {"name": "Spring Boot", "level": 95},
+      {"name": "Angular", "level": 85},
+      {"name": "React", "level": 82},
+      {"name": "Kafka", "level": 88},
+      {"name": "Splunk", "level": 85}
+    ]
+  },
+  {
+    "category": "Data & Analytics",
+    "skills": [
+      {"name": "Tableau", "level": 88},
+      {"name": "Power BI", "level": 90},
+      {"name": "Apache Airflow", "level": 80},
+      {"name": "ETL Pipelines", "level": 92},
+      {"name": "Data Modeling", "level": 85}
+    ]
+  },
+  {
+    "category": "AI & Machine Learning",
+    "skills": [
+      {"name": "Generative AI", "level": 82},
+      {"name": "TensorFlow", "level": 75},
+      {"name": "Scikit-learn", "level": 80},
+      {"name": "NLP", "level": 78},
+      {"name": "LLMs", "level": 80}
+    ]
+  }
+]
