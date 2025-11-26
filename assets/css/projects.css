@@ -31,6 +31,7 @@
   transition: all 0.3s ease;
   flex-shrink: 0;
   text-align: left;
+  box-sizing: border-box;
 }
 
 .project-card:hover {
@@ -151,14 +152,100 @@
 
 /* Mobile Responsive */
 @media (max-width: 1100px) {
-  .projects-carousel { max-width: 100%; }
+  .projects-carousel { 
+    max-width: 100%; 
+    margin: 0;
+  }
 }
 
 @media (max-width: 768px) {
-  .projects-carousel { padding: 16px; max-width: 100%; }
-  .carousel-nav { display: none; }
+  .projects-carousel { 
+    padding: 16px; 
+    max-width: 100%;
+    margin: 0 -4px;
+  }
+  
+  .project-card {
+    padding: 16px;
+  }
+  
+  .project-title {
+    font-size: 18px;
+  }
+  
+  .project-description {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  
+  .project-header {
+    gap: 10px;
+  }
+  
+  .project-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+  
+  .project-stats {
+    gap: 12px;
+  }
+  
+  .project-stat {
+    font-size: 11px;
+  }
+  
+  .language-tag {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+  
+  .carousel-nav { 
+    display: none; 
+  }
+  
+  .carousel-dots {
+    margin-top: 16px;
+  }
 }
 
 @media (max-width: 480px) {
-  .projects-carousel { padding: 12px; }
+  .projects-carousel { 
+    padding: 12px;
+    margin: 0 -2px;
+  }
+  
+  .project-card {
+    padding: 12px;
+  }
+  
+  .project-title {
+    font-size: 16px;
+  }
+  
+  .project-description {
+    font-size: 12px;
+  }
+  
+  .project-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  
+  .project-stats {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .carousel-dots {
+    gap: 6px;
+    margin-top: 12px;
+  }
+  
+  .carousel-dot {
+    width: 6px;
+    height: 6px;
+  }
 }

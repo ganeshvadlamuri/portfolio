@@ -191,9 +191,108 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  .hero-section { padding: 40px 0; }
-  .hero-cta { flex-direction: column; align-items: center; }
-  .cta-primary, .cta-secondary { width: 200px; text-align: center; }
-  .stats-section { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-  .skills-grid { grid-template-columns: 1fr; }
+  .hero-section { 
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-cta { 
+    flex-direction: column; 
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .cta-primary, .cta-secondary { 
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    padding: 12px 16px;
+  }
+  
+  .stats-section { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+  }
+  
+  .stat-item {
+    padding: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.8rem;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+  }
+  
+  .skills-grid { 
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .skill-item {
+    padding: 1rem;
+  }
+  
+  .testimonial {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonial-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .stats-section {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  
+  .stat-item {
+    padding: 0.8rem;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .cta-primary, .cta-secondary {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  
+  .testimonial {
+    padding: 1rem;
+  }
+  
+  .testimonial-text {
+    font-size: 0.9rem;
+  }
 }
