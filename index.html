@@ -41,10 +41,11 @@
           </div>
           <nav class="nav-bar">
             <ul>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="post.html?slug=about-ganesh">About</a></li>
-              <li><a href="experience.html">Experience</a></li>
-              <li><a href="#top">Top Posts</a></li>
+              <li><a href="#contact"><span>Contact</span></a></li>
+              <li><a href="post.html?slug=about-ganesh"><span>About</span></a></li>
+              <li><a href="experience.html"><span>Experience</span></a></li>
+              <li><a href="certifications.html"><span>Certifications</span></a></li>
+              <li><a href="#feed"><span>Posts</span></a></li>
             </ul>
           </nav>
         </div>
@@ -55,13 +56,28 @@
       <div id="projects-container"></div>
       <div class="card" id="cats-card-top">
         <h3 class="uline">Categories</h3>
-        <ul class="list" id="cats-top"></ul>
+        <ul class="list" id="cats-top">
+          <li><a href="#security">🔒 Security</a></li>
+          <li><a href="#cloud">☁️ Cloud</a></li>
+          <li><a href="#pentesting">🎯 Penetration Testing</a></li>
+          <li><a href="#devops">⚙️ DevOps</a></li>
+          <li><a href="#compliance">📋 Compliance</a></li>
+          <li><a href="#automation">🤖 Automation</a></li>
+          <li><a href="#architecture">🏗️ Architecture</a></li>
+          <li><a href="#tutorials">📚 Tutorials</a></li>
+        </ul>
       </div>
     </div>
 
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-content">
+        <!-- Live Fun Facts -->
+        <div class="hero-fun-facts">
+          <h4>Live Stats</h4>
+          <div id="fun-facts"></div>
+        </div>
+        
         <h2 class="hero-title">Cybersecurity Expert & Security Architect</h2>
         <p class="hero-subtitle">Protecting digital assets through innovative security solutions, penetration testing, and robust architecture design. Specialized in application security and cloud security frameworks.</p>
         
@@ -76,8 +92,8 @@
     </section>
 
     <!-- Skills Section -->
-    <section style="margin: 3rem 0;">
-      <h3 class="uline" style="text-align: center; margin-bottom: 2rem;">Core Expertise</h3>
+    <section style="margin: 0.5rem 0 1.5rem 0;">
+      <h3 class="uline" style="text-align: center; margin-bottom: 1.5rem;">Core Expertise</h3>
       <div class="skills-grid" id="skills-container"></div>
     </section>
 
@@ -97,17 +113,27 @@
             </div>
           </div>
           <ul class="list">
-            <li><a href="tel:+15126653074">+1 512 665 3074</a></li>
-            <li><a href="mailto:ganeshvadlamuri.root@gmail.com">ganeshvadlamuri.root@gmail.com</a></li>
-            <li><a href="https://x.com/ganeshxploit" target="_blank" rel="noopener">Twitter/X</a></li>
-            <li><a href="https://www.linkedin.com/in/ganeshvadlamuri/" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="https://github.com/ganeshvadlamuri" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="tel:+15126653074">📞 +1 512 665 3074</a></li>
+            <li><a href="mailto:ganeshvadlamuri.root@gmail.com">✉️ ganeshvadlamuri.root@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/ganeshvadlamuri/" target="_blank" rel="noopener">💼 LinkedIn</a></li>
+            <li><a href="https://github.com/ganeshvadlamuri" target="_blank" rel="noopener">💻 GitHub</a></li>
+            <li><a href="https://x.com/ganeshxploit" target="_blank" rel="noopener">🐦 Twitter/X</a></li>
+            <li><a href="https://www.credly.com/users/ganeshvadlamuri" target="_blank" rel="noopener">🏆 Credly Badges</a></li>
+            <li><a href="https://medium.com/@ganeshvadlamuri" target="_blank" rel="noopener">📝 Medium Blog</a></li>
+            <li><a href="https://calendly.com/ganeshvadlamuri" target="_blank" rel="noopener">📅 Schedule Meeting</a></li>
           </ul>
         </div>
-        <div class="card">
+        <div class="card experience-card">
           <h3 class="uline">Experience</h3>
-          <ul class="list" id="xp-list"></ul>
-          <div style="margin-top:8px"><a href="experience.html">View all</a></div>
+          <div class="experience-timeline" id="xp-list"></div>
+          <div class="experience-footer">
+            <a href="experience.html" class="view-all-btn">View Full Journey →</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="uline">Certifications</h3>
+          <div id="certs"></div>
+          <div style="margin-top:12px"><a href="certifications.html">View all certificates</a></div>
         </div>
         <div class="card">
           <h3 class="uline">Killer Blogs</h3>
@@ -134,6 +160,7 @@
   <script src="assets/js/projects.js"></script>
   <script src="assets/js/animations.js"></script>
   <script src="assets/js/enhanced-features.js"></script>
+  <script src="assets/js/fun-facts.js"></script>
   <script src="assets/js/index.js" defer></script>
 </body>
 </html>

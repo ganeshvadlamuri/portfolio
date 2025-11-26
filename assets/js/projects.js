@@ -18,7 +18,6 @@ class GitHubProjectsCarousel {
 
   async fetchProjects() {
     try {
-      // Fetch all repositories with pagination
       let allRepos = [];
       let page = 1;
       let hasMore = true;
@@ -36,45 +35,50 @@ class GitHubProjectsCarousel {
       }
       
       this.projects = allRepos
-        .filter(repo => !repo.fork) // Include all non-fork repos
+        .filter(repo => !repo.fork)
         .map(repo => ({
           name: repo.name,
-          description: repo.description || 'No description available',
+          description: repo.description || 'Innovative project showcasing modern development practices',
           url: repo.html_url,
           homepage: repo.homepage,
           language: repo.language,
           stars: repo.stargazers_count,
           forks: repo.forks_count,
+          watchers: repo.watchers_count,
+          topics: repo.topics || [],
           updated: repo.updated_at
         }))
-        .sort((a, b) => new Date(b.updated) - new Date(a.updated)); // Sort by most recent
+        .sort((a, b) => new Date(b.updated) - new Date(a.updated));
         
     } catch (error) {
       console.error('Error fetching GitHub projects:', error);
       this.projects = [
         {
           name: 'Security-Scanner',
-          description: 'Advanced vulnerability scanner for web applications with automated reporting and comprehensive security analysis',
+          description: 'Advanced vulnerability scanner for web applications with automated reporting',
           url: '#',
           language: 'Python',
           stars: 45,
-          forks: 12
+          forks: 12,
+          watchers: 8
         },
         {
           name: 'Cloud-Security-Tools',
-          description: 'Collection of cloud security assessment tools for AWS, Azure, and GCP with automated compliance checking',
+          description: 'Collection of cloud security assessment tools for AWS, Azure, and GCP',
           url: '#',
           language: 'JavaScript',
           stars: 32,
-          forks: 8
+          forks: 8,
+          watchers: 5
         },
         {
           name: 'Penetration-Testing-Framework',
-          description: 'Comprehensive penetration testing framework with automated vulnerability detection and reporting',
+          description: 'Comprehensive penetration testing framework with automated vulnerability detection',
           url: '#',
           language: 'Python',
           stars: 67,
-          forks: 23
+          forks: 23,
+          watchers: 15
         }
       ];
     }
@@ -108,10 +112,10 @@ class GitHubProjectsCarousel {
     return `
       <div class="project-card" onclick="window.open('${redirectUrl}', '_blank')">
         <div class="project-header">
-          <div class="project-icon">${project.name.charAt(0).toUpperCase()}</div>
-          <h3 class="project-title">${project.name.replace(/-/g, ' ')}</h3>
+          <div class="project-icon">${this.getProjectIcon(project)}</div>
+          <h3 class="project-title">${project.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</h3>
         </div>
-        <p class="project-description">${project.description}</p>
+        <p class="project-description">${this.truncateText(project.description, 120)}</p>
         <div class="project-stats">
           <div class="project-stat">
             <span>⭐</span>
@@ -121,12 +125,32 @@ class GitHubProjectsCarousel {
             <span>🍴</span>
             <span>${project.forks || 0}</span>
           </div>
+          <div class="project-stat">
+            <span>👁</span>
+            <span>${project.watchers || 0}</span>
+          </div>
         </div>
         <div class="project-languages">
           ${project.language ? `<span class="language-tag">${project.language}</span>` : ''}
+          <span class="language-tag">${this.timeAgo(project.updated)}</span>
         </div>
       </div>
     `;
+  }
+
+  getProjectIcon(project) {
+    const name = project.name.toLowerCase();
+    if (name.includes('web') || name.includes('site')) return '🌐';
+    if (name.includes('api') || name.includes('server')) return '⚙️';
+    if (name.includes('mobile') || name.includes('app')) return '📱';
+    if (name.includes('bot') || name.includes('ai')) return '🤖';
+    if (name.includes('game')) return '🎮';
+    if (name.includes('security') || name.includes('scanner')) return '🔒';
+    return project.name.charAt(0).toUpperCase();
+  }
+
+  truncateText(text, length) {
+    return text.length > length ? text.substring(0, length) + '...' : text;
   }
 
   setupEventListeners() {
@@ -168,8 +192,7 @@ class GitHubProjectsCarousel {
     const dots = document.querySelectorAll('.carousel-dot');
     
     if (track) {
-      const translateX = -this.currentIndex * 100;
-      track.style.transform = `translateX(${translateX}%)`;
+      track.style.transform = `translateX(-${this.currentIndex * 100}%)`;
     }
 
     dots.forEach((dot, i) => {
@@ -181,7 +204,7 @@ class GitHubProjectsCarousel {
     this.stopAutoSlide();
     this.autoSlideInterval = setInterval(() => {
       this.nextSlide();
-    }, 3000);
+    }, 4000);
   }
 
   stopAutoSlide() {
@@ -192,7 +215,6 @@ class GitHubProjectsCarousel {
   }
   
   startAutoRefresh() {
-    // Refresh projects every 5 minutes to sync new projects
     this.refreshInterval = setInterval(async () => {
       const oldCount = this.projects.length;
       await this.fetchProjects();
@@ -202,7 +224,18 @@ class GitHubProjectsCarousel {
         this.setupEventListeners();
         console.log('Projects updated: Found new repositories');
       }
-    }, 300000); // 5 minutes
+    }, 300000);
+  }
+
+  timeAgo(dateString) {
+    const now = new Date();
+    const past = new Date(dateString);
+    const diffInSeconds = Math.floor((now - past) / 1000);
+
+    if (diffInSeconds < 60) return 'just now';
+    if (diffInSeconds < 3600) return `${Math.floor(diffInSeconds / 60)}m ago`;
+    if (diffInSeconds < 86400) return `${Math.floor(diffInSeconds / 3600)}h ago`;
+    return `${Math.floor(diffInSeconds / 86400)}d ago`;
   }
 }
 

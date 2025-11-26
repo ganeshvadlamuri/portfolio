@@ -108,14 +108,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     items.slice(0, 4).forEach(xp => {
       const range = formatDateRange(xp.start, xp.end);
-      const li = document.createElement('li');
-      li.innerHTML = `
+      const div = document.createElement('div');
+      div.className = 'xp-item';
+      div.innerHTML = `
         <a href="experience.html" aria-label="${xp.role} at ${xp.company}">
-          ${escapeHtml(xp.role)} - ${escapeHtml(xp.company)}
+          <div class="xp-role">${escapeHtml(xp.role)}</div>
+          <div class="xp-company">${escapeHtml(xp.company)}</div>
         </a>
         <div class="xp-small">${range}</div>
       `;
-      fragment.appendChild(li);
+      fragment.appendChild(div);
     });
     
     list.appendChild(fragment);
