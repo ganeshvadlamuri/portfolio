@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Ganesh Vadlamuri � Information Security & Technology</title>
   <meta name="description" content="Ganesh Vadlamuri � Security, AppSec, Cloud. Articles, projects, and contact." />
   <meta name="theme-color" content="#22c55e" />
@@ -11,13 +13,21 @@
   <link rel="stylesheet" href="assets/css/mobile.css" />
   <link rel="stylesheet" href="assets/css/projects.css" />
   <link rel="stylesheet" href="assets/css/top-row.css" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/hero.css" />
+  
+  <!-- Resource Hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://api.github.com" />
 </head>
 <body>
   <div class="wrap">
     <div class="topbar">
       <div class="brand">
         <div class="brand-row">
-          <img class="brand-pfp" src="assets/profile.jpg" alt="Ganesh Vadlamuri avatar">
+          <img class="brand-pfp" src="assets/profile.jpg" alt="Ganesh Vadlamuri avatar" loading="eager" fetchpriority="high">
           <div class="brand-text">
             <div class="pattern-binary" aria-hidden="true">
               <div class="bit bit1">0101010011010011011010011010011010101001101001101101001101001101010100110100110110100110100110101010011010011011010011010011010101</div>
@@ -48,6 +58,28 @@
         <ul class="list" id="cats-top"></ul>
       </div>
     </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2 class="hero-title">Cybersecurity Expert & Security Architect</h2>
+        <p class="hero-subtitle">Protecting digital assets through innovative security solutions, penetration testing, and robust architecture design. Specialized in application security and cloud security frameworks.</p>
+        
+        <div class="hero-cta">
+          <a href="#contact" class="cta-primary">Get In Touch</a>
+          <a href="assets/resume.pdf" class="cta-secondary" target="_blank">Download Resume</a>
+        </div>
+      </div>
+      
+      <!-- Stats Section -->
+      <div class="stats-section" id="stats-container"></div>
+    </section>
+
+    <!-- Skills Section -->
+    <section style="margin: 3rem 0;">
+      <h3 class="uline" style="text-align: center; margin-bottom: 2rem;">Core Expertise</h3>
+      <div class="skills-grid" id="skills-container"></div>
+    </section>
 
     <main>
       <!-- Feed -->
@@ -98,7 +130,10 @@
     </footer>
   </div>
 
+  <script src="assets/js/performance.js"></script>
   <script src="assets/js/projects.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/enhanced-features.js"></script>
   <script src="assets/js/index.js" defer></script>
 </body>
 </html>
