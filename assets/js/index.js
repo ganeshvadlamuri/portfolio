@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 // Helpers with offline fallback when opening via file://
 async function getPosts(){
   try{
-    const res = await fetch('data/posts.json', {cache:'no-store'});
+    const res = await fetch('./data/posts.json', {cache:'no-store'});
     if(!res.ok) throw new Error('HTTP '+res.status);
     return await res.json();
   }catch(e){
@@ -108,7 +108,7 @@ async function getPosts(){
 
 async function getExperience(){
   try{
-    const res = await fetch('data/experience.json', {cache:'no-store'});
+    const res = await fetch('./data/experience.json', {cache:'no-store'});
     if(!res.ok) throw new Error('HTTP '+res.status);
     return await res.json();
   }catch(e){
