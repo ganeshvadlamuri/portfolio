@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <title>Ganesh Vadlamuri � Information Security & Technology</title>
   <meta name="description" content="Ganesh Vadlamuri � Security, AppSec, Cloud. Articles, projects, and contact." />
   <meta name="theme-color" content="#22c55e" />
@@ -16,6 +17,7 @@
   <link rel="stylesheet" href="assets/css/theme.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
   <link rel="stylesheet" href="assets/css/hero.css" />
+  <link rel="preload" href="assets/profile.jpg" as="image" />
   
   <!-- Resource Hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,7 +56,7 @@
 
     <div class="top-row">
       <div id="projects-container"></div>
-      <div class="card" id="cats-card-top">
+      <div class="card" id="cats-card-top" style="min-height:360px">
         <h3 class="uline">Categories</h3>
         <ul class="list" id="cats-top">
           <li><a href="#security">🔒 Security</a></li>
@@ -72,14 +74,6 @@
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-content">
-        <!-- Live Fun Facts -->
-        <div class="hero-fun-facts">
-          <h4>Live Stats</h4>
-          <div id="fun-facts"></div>
-        </div>
-        
-
-        
         <h2 class="hero-title">Senior Software Engineer | Cloud & AI Specialist</h2>
         <p class="hero-subtitle">6 years of expertise in designing scalable web applications using Java, Spring Boot, and cloud platforms (AWS, Azure, GCP). Specializing in fraud detection, microservices architecture, and Generative AI integration. Currently modernizing critical systems at Wells Fargo.</p>
         
@@ -94,49 +88,10 @@
     </section>
 
     <!-- Skills Section -->
-    <section style="margin: 2rem 0;">
-      <h3 class="uline" style="text-align: center; margin-bottom: 1.5rem;">Technical Skills</h3>
-      <div id="skills-container" style="max-width: 900px; margin: 0 auto;"></div>
+    <section style="margin: 3rem 0;">
+      <h3 class="uline" style="text-align: center; margin-bottom: 2rem; font-size: 28px;">Technical Skills</h3>
+      <div id="skills-container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;"></div>
     </section>
-    
-    <script>
-    (async function() {
-      const container = document.getElementById('skills-container');
-      if (!container) return;
-      
-      const res = await fetch('./data/skills.json');
-      const skillsData = await res.json();
-      
-      skillsData.forEach((cat, i) => {
-        const acc = document.createElement('div');
-        acc.style.cssText = 'background:var(--panel);border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden';
-        
-        const hdr = document.createElement('div');
-        hdr.style.cssText = 'display:flex;justify-content:space-between;padding:16px 20px;cursor:pointer;font-weight:600;user-select:none';
-        hdr.innerHTML = `<span>${cat.category}</span><span style="color:var(--accent)">${i===0?'▲':'▼'}</span>`;
-        
-        const cnt = document.createElement('div');
-        cnt.style.cssText = `padding:0 20px 16px;display:${i===0?'block':'none'};gap:12px`;
-        
-        cat.skills.forEach(s => {
-          const d = document.createElement('div');
-          d.style.marginBottom = '12px';
-          d.innerHTML = `<div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px"><span>${s.name}</span><span style="color:var(--accent);font-weight:600">${s.level}%</span></div><div style="height:6px;background:var(--border);border-radius:3px;overflow:hidden"><div style="height:100%;background:linear-gradient(90deg,var(--accent),#16a34a);width:${s.level}%;transition:width 1s"></div></div>`;
-          cnt.appendChild(d);
-        });
-        
-        hdr.onclick = () => {
-          const open = cnt.style.display === 'block';
-          cnt.style.display = open ? 'none' : 'block';
-          hdr.querySelector('span:last-child').textContent = open ? '▼' : '▲';
-        };
-        
-        acc.appendChild(hdr);
-        acc.appendChild(cnt);
-        container.appendChild(acc);
-      });
-    })();
-    </script>
 
     <main>
       <!-- Feed -->
@@ -176,27 +131,20 @@
           <div id="certs"></div>
           <div style="margin-top:12px"><a href="certifications.html">View all certificates</a></div>
         </div>
-        <div class="card">
-          <h3 class="uline">Killer Blogs</h3>
-          <ul class="list">
-            <li><a href="#">Bruce Schneier</a></li>
-            <li><a href="#">Google Online Security Blog</a></li>
-            <li><a href="#">Krebs on Security</a></li>
-            <li><a href="#">SANS Internet Storm Center</a></li>
-            <li><a href="#">TaoSecurity</a></li>
-            <li><a href="#">Wired � Threat Level</a></li>
-          </ul>
-        </div>
       </aside>
     </main>
 
     <div style="margin-top:16px"><a id="older" href="#" class="btn">Older posts</a></div>
 
     <footer>
-      Deep Light�style template � � <span id="y"></span> Ganesh Vadlamuri � Built with plain HTML/CSS
+      &copy; <span id="y"></span> Ganesh Vadlamuri. All rights reserved.
     </footer>
   </div>
 
+  <script src="assets/js/page-transition.js"></script>
+  <script src="assets/js/update-title.js"></script>
+  <script src="assets/js/update-tagline.js"></script>
+  <script src="assets/js/creative-skills.js"></script>
   <script src="assets/js/optimized-loader.js"></script>
   <script src="assets/js/konami.js"></script>
   <script src="assets/js/cursor-trail.js"></script>
@@ -204,7 +152,6 @@
   <script src="assets/js/theme-toggle.js"></script>
   <script src="assets/js/footer-security.js"></script>
   <script src="assets/js/visitor-info.js"></script>
-  <script src="assets/js/fun-facts.js"></script>
   <script src="assets/js/top-features.js"></script>
   <script src="assets/js/github-enhancements.js"></script>
   <script src="assets/js/share-buttons.js"></script>
@@ -218,5 +165,6 @@
   <script src="assets/js/matrix-effects.js" defer></script>
   <script src="assets/js/contact-form.js" defer></script>
   <script src="assets/js/index.js" defer></script>
+  <noscript><style>.hero-title{opacity:1!important}</style></noscript>
 </body>
 </html>

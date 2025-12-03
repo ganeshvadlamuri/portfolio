@@ -1,8 +1,3 @@
 Contact: mailto:ganeshvadlamuri.root@gmail.com
-Contact: https://www.linkedin.com/in/ganeshvadlamuri/
-Expires: 2025-12-31T23:59:59.000Z
-Encryption: https://keybase.io/ganeshvadlamuri/pgp_keys.asc
 Preferred-Languages: en
 Canonical: https://ganeshvadlamuri.github.io/.well-known/security.txt
-Policy: https://ganeshvadlamuri.github.io/security-policy
-Acknowledgments: https://ganeshvadlamuri.github.io/security-acknowledgments

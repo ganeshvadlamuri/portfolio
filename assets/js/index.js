@@ -56,8 +56,25 @@ function renderCategories(posts, catEls) {
   categories.forEach(c => {
     const li = document.createElement('li');
     const href = c.toLowerCase() === 'about' ? 'post.html?slug=about-ganesh' : `#category-${c.toLowerCase()}`;
-    li.innerHTML = `<a href="${href}">${escapeHtml(c)}</a>`;
-    fragment.appendChild(li.cloneNode(true));
+    const a = document.createElement('a');
+    a.href = href;
+    a.textContent = c;
+    a.style.cssText = 'display:flex;align-items:center;gap:8px;padding:10px 14px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;text-decoration:none!important;color:var(--ink);font-weight:600;transition:all 0.3s;font-size:14px;position:relative;overflow:hidden';
+    a.innerHTML = `<span style="position:absolute;inset:0;background:linear-gradient(135deg,var(--accent),#16a34a);opacity:0;transition:opacity 0.3s;border-radius:8px"></span><span style="position:relative;z-index:1">${c}</span>`;
+    a.onmouseover = function() {
+      this.children[0].style.opacity = '1';
+      this.children[1].style.color = '#000';
+      this.style.transform = 'translateY(-2px)';
+      this.style.borderColor = 'var(--accent)';
+    };
+    a.onmouseout = function() {
+      this.children[0].style.opacity = '0';
+      this.children[1].style.color = 'var(--ink)';
+      this.style.transform = 'translateY(0)';
+      this.style.borderColor = 'rgba(34,197,94,0.2)';
+    };
+    li.appendChild(a);
+    fragment.appendChild(li);
   });
   
   catEls.forEach(el => {

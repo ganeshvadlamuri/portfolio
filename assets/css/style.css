@@ -64,6 +64,7 @@ main{display:grid;grid-template-columns:1fr 360px;gap:36px;margin-top:22px}
 
 .list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .list a{color:var(--ink-soft)}
+.list a:hover{text-decoration:none}
 .profile{display:flex;gap:14px;align-items:center}
 .pfp{width:64px;height:64px;border-radius:999px;object-fit:cover;border:1px solid var(--border)}
 

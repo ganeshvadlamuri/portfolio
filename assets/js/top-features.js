@@ -3,7 +3,7 @@
 // 1. Typing Animation for Hero Title
 class TypingAnimation {
   constructor() {
-    this.text = 'Cybersecurity Expert & Security Architect';
+    this.text = 'Senior Software Engineer | Cloud & AI Specialist';
     this.element = document.querySelector('.hero-title');
     this.index = 0;
     this.init();
