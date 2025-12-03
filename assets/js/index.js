@@ -59,19 +59,28 @@ function renderCategories(posts, catEls) {
     const a = document.createElement('a');
     a.href = href;
     a.textContent = c;
-    a.style.cssText = 'display:flex;align-items:center;gap:8px;padding:10px 14px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;text-decoration:none!important;color:var(--ink);font-weight:600;transition:all 0.3s;font-size:14px;position:relative;overflow:hidden';
+    a.style.cssText = 'display:flex;align-items:center;gap:8px;padding:12px 16px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;text-decoration:none!important;color:var(--ink-soft);font-weight:600;transition:all 0.3s;font-size:14px;position:relative;overflow:hidden;min-height:44px';
     a.innerHTML = `<span style="position:absolute;inset:0;background:linear-gradient(135deg,var(--accent),#16a34a);opacity:0;transition:opacity 0.3s;border-radius:8px"></span><span style="position:relative;z-index:1">${c}</span>`;
     a.onmouseover = function() {
       this.children[0].style.opacity = '1';
       this.children[1].style.color = '#000';
       this.style.transform = 'translateY(-2px)';
       this.style.borderColor = 'var(--accent)';
+      this.style.boxShadow = '0 4px 12px rgba(34,197,94,0.3)';
     };
     a.onmouseout = function() {
       this.children[0].style.opacity = '0';
-      this.children[1].style.color = 'var(--ink)';
+      this.children[1].style.color = 'var(--ink-soft)';
       this.style.transform = 'translateY(0)';
       this.style.borderColor = 'rgba(34,197,94,0.2)';
+      this.style.boxShadow = 'none';
+    };
+    a.onfocus = function() {
+      this.style.outline = '2px solid var(--accent)';
+      this.style.outlineOffset = '2px';
+    };
+    a.onblur = function() {
+      this.style.outline = 'none';
     };
     li.appendChild(a);
     fragment.appendChild(li);

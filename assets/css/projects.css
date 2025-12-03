@@ -184,10 +184,10 @@
   transform: translateY(-50%);
   background: linear-gradient(135deg, rgba(15,21,32,0.95), rgba(11,15,22,0.98));
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(34,197,94,0.3);
+  border: 2px solid rgba(34,197,94,0.4);
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,6 +196,11 @@
   transition: all 0.3s ease;
   z-index: 10;
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.carousel-nav:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .carousel-nav:hover {
@@ -216,13 +221,32 @@
 }
 
 .carousel-dot {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: rgba(34,197,94,0.3);
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-dot::after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(34,197,94,0.3);
+  transition: all 0.3s ease;
+}
+
+.carousel-dot:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .carousel-dot::before {
@@ -235,7 +259,7 @@
   transition: opacity 0.3s ease;
 }
 
-.carousel-dot.active {
+.carousel-dot.active::after {
   background: var(--accent);
   transform: scale(1.3);
 }
