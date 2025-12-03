@@ -59,3 +59,7 @@ That’s it — add a new object (at the top) and push.
 
 - `.nojekyll` disables Jekyll processing so files/folders starting with `_` are served as-is.
 - Everything is self-contained and easy to tweak. No frameworks.
+
+
+
+
