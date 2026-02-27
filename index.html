@@ -1,171 +1,491 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark light" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-  <title>Ganesh Vadlamuri | Senior Software Engineer | Wells Fargo</title>
-  <meta name="description" content="Senior Software Engineer with 6 years experience in Java, Spring Boot, AWS, Azure, GCP. Specializing in fraud detection, microservices, and Generative AI at Wells Fargo." />
-  <meta name="keywords" content="Ganesh Vadlamuri, Software Engineer, Java Developer, Spring Boot, AWS, Cloud Engineer, Fraud Detection, Wells Fargo" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/css/style.css?v=3" />
-  <link rel="stylesheet" href="assets/css/mobile.css?v=3" />
-  <link rel="stylesheet" href="assets/css/projects.css?v=3" />
-  <link rel="stylesheet" href="assets/css/top-row.css?v=3" />
-  <link rel="stylesheet" href="assets/css/theme.css?v=3" />
-  <link rel="stylesheet" href="assets/css/animations.css?v=3" />
-  <link rel="stylesheet" href="assets/css/hero.css?v=3" />
-  <link rel="preload" href="assets/profile.jpg" as="image" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ganesh Vadlamuri | Senior Software Engineer - Java, Spring Boot, AWS, Cloud Architecture</title>
+  <meta name="description" content="Ganesh Vadlamuri - Senior Software Engineer at Wells Fargo with 6+ years experience in Java, Spring Boot, microservices, AWS, GCP, Kafka, Docker, Kubernetes, and cloud-native architectures. Expert in fraud detection systems, REST APIs, PostgreSQL, MongoDB, CI/CD, and DevOps. Located in Charlotte, NC. MS in Computer Science from Texas State University.">
+  <meta name="keywords" content="Ganesh Vadlamuri, Senior Software Engineer, Java Developer, Spring Boot Expert, AWS Certified, GCP, Microservices Architect, Kafka, Docker, Kubernetes, Cloud Engineer, Full Stack Developer, Wells Fargo, Charlotte NC, REST API, PostgreSQL, MongoDB, DevOps, CI/CD, Jenkins, Terraform, Software Engineer Charlotte, Java Spring Boot Developer, Cloud Native Applications, Fraud Detection Systems, Texas State University, Computer Science">
+  <meta name="author" content="Ganesh Vadlamuri">
   
-  <!-- Resource Hints -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="dns-prefetch" href="https://api.github.com" />
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ganeshvadlamuri.github.io/">
+  <meta property="og:title" content="Ganesh Vadlamuri - Senior Software Engineer">
+  <meta property="og:description" content="6+ years building scalable backend systems, microservices, and cloud solutions">
+  <meta property="og:image" content="https://ganeshvadlamuri.github.io/assets/profile.jpg">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ganesh Vadlamuri - Senior Software Engineer">
+  <meta name="twitter:description" content="Java, Spring Boot, AWS, GCP, Microservices Expert">
+  
+  <link rel="canonical" href="https://ganeshvadlamuri.github.io/">
+  
+  <!-- JSON-LD Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ganesh Vadlamuri",
+    "jobTitle": "Senior Software Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Wells Fargo"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Charlotte",
+      "addressRegion": "NC",
+      "postalCode": "28262",
+      "addressCountry": "US"
+    },
+    "email": "ganeshvadlamuri.root@gmail.com",
+    "telephone": "+1-980-320-0468",
+    "url": "https://ganeshvadlamuri.github.io",
+    "sameAs": [
+      "https://linkedin.com/in/ganeshvadlamuri",
+      "https://github.com/ganeshvadlamuri"
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Texas State University",
+      "degree": "Master of Science in Computer Science"
+    },
+    "knowsAbout": [
+      "Java", "Spring Boot", "Microservices", "AWS", "GCP", "Kafka", "Docker", "Kubernetes",
+      "PostgreSQL", "MongoDB", "REST APIs", "Cloud Architecture", "DevOps", "CI/CD"
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Google Cloud Digital Leader",
+        "credentialCategory": "certification"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "AWS Cloud Architect",
+        "credentialCategory": "certification"
+      }
+    ]
+  }
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #0a0f1e 0%, #1a1f3a 100%); color: #e2e8f0; position: relative; overflow-x: hidden; }
+    body::before { content: ''; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%); pointer-events: none; z-index: 0; }
+    main { position: relative; z-index: 1; }
+    .accent { color: #10b981; }
+    .bg-accent { background: linear-gradient(135deg, #10b981, #059669); }
+    .glass { background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2); backdrop-filter: blur(20px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .glass:hover { background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.4); transform: translateY(-8px) scale(1.02); }
+    .glow { box-shadow: 0 0 30px rgba(16, 185, 129, 0.4), 0 0 60px rgba(16, 185, 129, 0.2); }
+    nav { position: sticky; top: 0; z-index: 50; background: rgba(10, 15, 30, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(16, 185, 129, 0.1); }
+    .typing::after { content: '|'; animation: blink 1s infinite; }
+    @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+    .stat-card, .cert-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; }
+    .stat-card::before, .cert-card::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent); transition: left 0.5s; }
+    .stat-card:hover::before, .cert-card:hover::before { left: 100%; }
+    .stat-card:hover, .cert-card:hover { transform: translateY(-10px) scale(1.05); box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3); }
+    #back-to-top { position: fixed; bottom: 30px; right: 30px; background: linear-gradient(135deg, #10b981, #059669); color: #000; width: 56px; height: 56px; border-radius: 50%; display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 100; transition: all 0.3s; font-size: 24px; font-weight: bold; box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4); }
+    #back-to-top:hover { transform: translateY(-8px) scale(1.1); box-shadow: 0 8px 30px rgba(16, 185, 129, 0.6); }
+    .loader { border: 4px solid rgba(16, 185, 129, 0.2); border-top: 4px solid #10b981; border-radius: 50%; width: 50px; height: 50px; animation: spin 0.8s linear infinite; margin: 60px auto; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    .mobile-menu { transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .mobile-menu.active { transform: translateX(0); }
+    .fade-in { animation: fadeIn 0.6s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .tech-icon { width: 48px; height: 48px; display: inline-flex; align-items: center; justify-content: center; background: rgba(16, 185, 129, 0.1); border: 2px solid rgba(16, 185, 129, 0.3); border-radius: 12px; font-size: 24px; transition: all 0.3s; }
+    .tech-icon:hover { background: rgba(16, 185, 129, 0.2); border-color: #10b981; transform: scale(1.1) rotate(5deg); }
+  </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="topbar">
-      <div class="brand">
-        <div class="brand-row">
-          <img class="brand-pfp" src="assets/profile.jpg" alt="Ganesh Vadlamuri avatar" loading="eager" fetchpriority="high">
-          <div class="brand-text">
-            <div class="pattern-binary" aria-hidden="true">
-              <div class="bit bit1">0101010011010011011010011010011010101001101001101101001101001101010100110100110110100110100110101010011010011011010011010011010101</div>
-              <div class="bit bit2">1101001100101010101100101010011010010101011001010100110100101010110010101001101001010101100101010011010010101011001010100</div>
-              <div class="bit bit3">0011010011011010011010011010101001101001101101001101001101010100110100110110100110100110101010011010011011010011010011010</div>
-              <div class="bit bit4">1010011010010110100110100110101001101001101101001101001101010100110100110110100110100110101010011010011011010011010011010</div>
-            </div>
-            <h1>Ganesh Vadlamuri</h1>
-            <div class="tagline">Information Security & Technology</div>
-            <div class="tagline">�Build it right. Secure it better.�</div>
-          </div>
-          <nav class="nav-bar">
-            <ul>
-              <li><a href="#contact"><span>Contact</span></a></li>
-              <li><a href="post.html?slug=about-ganesh"><span>About</span></a></li>
-              <li><a href="experience.html"><span>Experience</span></a></li>
-              <li><a href="certifications.html"><span>Certifications</span></a></li>
-              <li><a href="#feed"><span>Posts</span></a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
 
-    <div class="top-row">
-      <div id="projects-container"></div>
-      <div class="card" id="cats-card-top" style="min-height:360px">
-        <h3 class="uline">Categories</h3>
-        <ul class="list" id="cats-top">
-          <li><a href="#security">🔒 Security</a></li>
-          <li><a href="#cloud">☁️ Cloud</a></li>
-          <li><a href="#pentesting">🎯 Penetration Testing</a></li>
-          <li><a href="#devops">⚙️ DevOps</a></li>
-          <li><a href="#compliance">📋 Compliance</a></li>
-          <li><a href="#automation">🤖 Automation</a></li>
-          <li><a href="#architecture">🏗️ Architecture</a></li>
-          <li><a href="#tutorials">📚 Tutorials</a></li>
-        </ul>
-      </div>
-    </div>
+  <!-- Skip to content (Accessibility) -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-accent text-black px-4 py-2 rounded">Skip to main content</a>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <h2 class="hero-title">Senior Software Engineer  |  Cloud & AI Specialist</h2>
-        <p class="hero-subtitle">6 years of expertise in designing scalable web applications using Java, Spring Boot, and cloud platforms (AWS, Azure, GCP). Specializing in fraud detection, microservices architecture, and Generative AI integration. Currently modernizing critical systems at Wells Fargo.</p>
-        
-        <div class="hero-cta">
-          <a href="#contact" class="cta-primary">Get In Touch</a>
-          <a href="assets/resume.pdf" class="cta-secondary" target="_blank">Download Resume</a>
-        </div>
+  <!-- Nav -->
+  <nav class="py-4 px-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <div class="font-bold text-xl">Ganesh <span class="accent">Vadlamuri</span></div>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex gap-8 items-center">
+        <a href="#about" class="hover:text-accent transition">About</a>
+        <a href="#experience" class="hover:text-accent transition">Experience</a>
+        <a href="#skills" class="hover:text-accent transition">Skills</a>
+        <a href="#certifications" class="hover:text-accent transition">Certifications</a>
+        <a href="#projects" class="hover:text-accent transition">Projects</a>
+        <a href="#contact" class="px-6 py-2 bg-accent text-black font-semibold rounded-lg hover:opacity-90 transition">Contact</a>
       </div>
       
-      <!-- Stats Section -->
-      <div class="stats-section" id="stats-container"></div>
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-2xl" aria-label="Toggle menu">
+        <span id="menu-icon">☰</span>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-black/95 backdrop-blur-xl border-l border-accent/20 md:hidden">
+      <div class="p-6 space-y-6">
+        <button id="close-menu" class="text-2xl float-right" aria-label="Close menu">✕</button>
+        <div class="clear-both pt-8 space-y-4">
+          <a href="#about" class="block hover:text-accent transition">About</a>
+          <a href="#experience" class="block hover:text-accent transition">Experience</a>
+          <a href="#skills" class="block hover:text-accent transition">Skills</a>
+          <a href="#certifications" class="block hover:text-accent transition">Certifications</a>
+           <a href="#projects" class="block hover:text-accent transition">Projects</a>
+          <a href="#contact" class="block px-6 py-2 bg-accent text-black font-semibold rounded-lg text-center">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="min-h-screen flex items-center justify-center px-6">
+      <div class="max-w-4xl text-center">
+        <div class="mb-8">
+          <img src="assets/profile.jpg" alt="Ganesh Vadlamuri - Senior Software Engineer" class="w-32 h-32 rounded-full mx-auto border-4 border-accent/30 shadow-2xl" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22128%22 height=%22128%22%3E%3Crect fill=%22%2310b981%22 width=%22128%22 height=%22128%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2248%22 fill=%22%23000%22%3EGV%3C/text%3E%3C/svg%3E'">
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6">
+          Hi, I'm <span class="accent">Ganesh Vadlamuri</span>
+        </h1>
+        <p class="text-2xl md:text-3xl mb-4 typing" id="typing" role="status" aria-live="polite"></p>
+        <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+          Senior Software Engineer at Wells Fargo with 6+ years building scalable microservices, fraud detection systems, and cloud-native applications using Java, Spring Boot, Kafka, AWS, and GCP.
+        </p>
+        <div class="flex gap-4 justify-center flex-wrap">
+          <a href="#contact" class="px-8 py-4 bg-accent text-black font-bold rounded-lg hover:opacity-90 transition">Get In Touch</a>
+          <a href="assets/resume.pdf" class="px-8 py-4 glass rounded-lg font-semibold hover:glow transition" download>Download Resume</a>
+        </div>
+        
+        <!-- Live Stats -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16 max-w-2xl mx-auto">
+          <div class="stat-card glass rounded-xl p-6">
+            <div class="text-4xl font-bold accent" data-count="6">0</div>
+            <div class="text-sm text-gray-400 mt-2">Years Experience</div>
+          </div>
+          <div class="stat-card glass rounded-xl p-6">
+            <div class="text-4xl font-bold accent" data-count="50">0</div>
+            <div class="text-sm text-gray-400 mt-2">Projects Delivered</div>
+          </div>
+          <div class="stat-card glass rounded-xl p-6">
+            <div class="text-4xl font-bold accent" data-count="5">0</div>
+            <div class="text-sm text-gray-400 mt-2">Companies</div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section style="margin: 3rem 0;">
-      <h3 class="uline" style="text-align: center; margin-bottom: 2rem; font-size: 28px;">Technical Skills</h3>
-      <div id="skills-container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;"></div>
+    <!-- About -->
+    <section id="about" class="py-20 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl font-bold mb-12 text-center">About <span class="accent">Me</span></h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="glass rounded-2xl p-8 fade-in">
+            <div class="tech-icon mb-4">🎓</div>
+            <h3 class="text-xl font-bold mb-4 accent">Education</h3>
+            <p class="text-gray-300 font-semibold">MS in Computer Science</p>
+            <p class="text-sm text-gray-500">Texas State University | GPA: 3.5/4.0 | May 2024</p>
+          </div>
+          <div class="glass rounded-2xl p-8 fade-in">
+            <div class="tech-icon mb-4">💼</div>
+            <h3 class="text-xl font-bold mb-4 accent">Current Role</h3>
+            <p class="text-gray-300 font-semibold">Senior Assistant Vice President</p>
+            <p class="text-sm text-gray-500">Wells Fargo | Dec 2024 - Present</p>
+          </div>
+          <div class="glass rounded-2xl p-8 fade-in">
+            <div class="tech-icon mb-4">📍</div>
+            <h3 class="text-xl font-bold mb-4 accent">Location</h3>
+            <p class="text-gray-300 font-semibold">Charlotte, North Carolina</p>
+            <p class="text-sm text-gray-500">Open to remote opportunities</p>
+          </div>
+          <div class="glass rounded-2xl p-8 fade-in">
+            <div class="tech-icon mb-4">🚀</div>
+            <h3 class="text-xl font-bold mb-4 accent">Expertise</h3>
+            <p class="text-gray-300 font-semibold">Microservices & Cloud Architecture</p>
+            <p class="text-sm text-gray-500">Java, Spring Boot, Kafka, AWS, GCP</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <main>
-      <!-- Feed -->
-      <section id="feed"></section>
+    <!-- Experience -->
+    <section id="experience" class="py-20 px-6 bg-black/20">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl font-bold mb-12 text-center">Work <span class="accent">Experience</span></h2>
+        <div id="exp-container" class="space-y-6">
+          <div class="loader"></div>
+        </div>
+      </div>
+    </section>
 
-      <!-- Sidebar -->
-      <aside class="side">
-        <div class="card" id="contact">
-          <h3 class="uline">Connect with Me</h3>
-          <div class="profile" style="margin:10px 0 16px 0">
-            <img class="pfp" src="assets/profile.jpg" alt="Ganesh Vadlamuri avatar" />
-            <div>
-              <div style="font-weight:700">Ganesh Vadlamuri</div>
-              <div style="color:var(--muted);font-size:14px">Security � AppSec � Cloud</div>
-            </div>
+    <!-- Skills -->
+    <section id="skills" class="py-20 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl font-bold mb-12 text-center">Technical <span class="accent">Skills</span></h2>
+        <div id="skills-container" class="grid md:grid-cols-2 gap-6">
+          <div class="loader"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="py-20 px-6 bg-black/20">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl font-bold mb-12 text-center">Certifications <span class="accent">& Achievements</span></h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="cert-card glass rounded-xl p-8">
+            <div class="tech-icon mb-4 mx-auto">☁️</div>
+            <h3 class="font-bold mb-2 accent text-lg">Google Cloud Digital Leader</h3>
+            <p class="text-sm text-gray-400">Google Cloud | Apr 2025</p>
           </div>
-          <ul class="list">
-            <li><a href="tel:+15126653074">📞 +1 512 665 3074</a></li>
-            <li><a href="mailto:ganeshvadlamuri.root@gmail.com">✉️ ganeshvadlamuri.root@gmail.com</a></li>
-            <li><a href="https://www.linkedin.com/in/ganeshvadlamuri/" target="_blank" rel="noopener">💼 LinkedIn</a></li>
-            <li><a href="https://github.com/ganeshvadlamuri" target="_blank" rel="noopener">💻 GitHub</a></li>
-            <li><a href="https://x.com/ganeshxploit" target="_blank" rel="noopener">🐦 Twitter/X</a></li>
-            <li><a href="https://www.credly.com/users/ganeshvadlamuri" target="_blank" rel="noopener">🏆 Credly Badges</a></li>
-            <li><a href="https://medium.com/@ganeshvadlamuri" target="_blank" rel="noopener">📝 Medium Blog</a></li>
-            <li><a href="https://calendly.com/ganeshvadlamuri-root/30min" target="_blank" rel="noopener">📅 Schedule Meeting</a></li>
-          </ul>
-        </div>
-        <div class="card experience-card">
-          <h3 class="uline">Experience</h3>
-          <div class="experience-timeline" id="xp-list"></div>
-          <div class="experience-footer">
-            <a href="experience.html" class="view-all-btn">View Full Journey →</a>
+          <div class="cert-card glass rounded-xl p-8">
+            <div class="tech-icon mb-4 mx-auto">🤖</div>
+            <h3 class="font-bold mb-2 accent text-lg">Google Gen AI Certified</h3>
+            <p class="text-sm text-gray-400">Prompt Design | Jul 2024</p>
+          </div>
+          <div class="cert-card glass rounded-xl p-8">
+            <div class="tech-icon mb-4 mx-auto">🏗️</div>
+            <h3 class="font-bold mb-2 accent text-lg">AWS Cloud Architect</h3>
+            <p class="text-sm text-gray-400">Amazon Web Services | May 2022</p>
+          </div>
+          <div class="cert-card glass rounded-xl p-8">
+            <div class="tech-icon mb-4 mx-auto">🎓</div>
+            <h3 class="font-bold mb-2 accent text-lg">AWS Academy Graduate</h3>
+            <p class="text-sm text-gray-400">Cloud Foundations | Apr 2022</p>
+          </div>
+          <div class="cert-card glass rounded-xl p-8">
+            <div class="tech-icon mb-4 mx-auto">🐍</div>
+            <h3 class="font-bold mb-2 accent text-lg">Joy of Computing (ELITE)</h3>
+            <p class="text-sm text-gray-400">NPTEL Python | Apr 2021</p>
           </div>
         </div>
-        <div class="card">
-          <h3 class="uline">Certifications</h3>
-          <div id="certs"></div>
-          <div style="margin-top:12px"><a href="certifications.html">View all certificates</a></div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-20 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl font-bold mb-12 text-center">Featured <span class="accent">Projects</span></h2>
+        <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="loader"></div>
         </div>
-      </aside>
-    </main>
+      </div>
+    </section>
 
-    <div style="margin-top:16px"><a id="older" href="#" class="btn">Older posts</a></div>
+    <!-- Contact -->
+    <section id="contact" class="py-20 px-6 bg-black/20">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-12">Get In <span class="accent">Touch</span></h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+          <a href="mailto:ganeshvadlamuri.root@gmail.com" class="glass rounded-2xl p-10 hover:glow transition group" aria-label="Email Ganesh Vadlamuri">
+            <div class="tech-icon mb-4 mx-auto group-hover:scale-110 transition">📧</div>
+            <h3 class="font-bold mb-2 text-lg">Email</h3>
+            <p class="text-sm text-gray-400">ganeshvadlamuri.root@gmail.com</p>
+          </a>
+          <a href="tel:+19803200468" class="glass rounded-2xl p-10 hover:glow transition group" aria-label="Call Ganesh Vadlamuri">
+            <div class="tech-icon mb-4 mx-auto group-hover:scale-110 transition">📱</div>
+            <h3 class="font-bold mb-2 text-lg">Phone</h3>
+            <p class="text-sm text-gray-400">+1 980-320-0468</p>
+          </a>
+          <a href="https://linkedin.com/in/ganeshvadlamuri" target="_blank" rel="noopener noreferrer" class="glass rounded-2xl p-10 hover:glow transition group" aria-label="LinkedIn Profile">
+            <div class="tech-icon mb-4 mx-auto group-hover:scale-110 transition">💼</div>
+            <h3 class="font-bold mb-2 text-lg">LinkedIn</h3>
+            <p class="text-sm text-gray-400">Connect with me</p>
+          </a>
+          <a href="https://github.com/ganeshvadlamuri" target="_blank" rel="noopener noreferrer" class="glass rounded-2xl p-10 hover:glow transition group" aria-label="GitHub Profile">
+            <div class="tech-icon mb-4 mx-auto group-hover:scale-110 transition">💻</div>
+            <h3 class="font-bold mb-2 text-lg">GitHub</h3>
+            <p class="text-sm text-gray-400">View my code</p>
+          </a>
+        </div>
+        <a href="https://calendly.com/ganeshvadlamuri-root/30min" target="_blank" rel="noopener noreferrer" class="inline-block px-12 py-5 bg-accent text-black font-bold rounded-xl hover:opacity-90 hover:scale-105 transition text-lg shadow-lg">
+          Schedule a Meeting
+        </a>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-      &copy; <span id="y"></span> Ganesh Vadlamuri. All rights reserved.
-    </footer>
+  <!-- Footer -->
+  <footer class="py-6 text-center text-gray-500 border-t border-accent/10">
+    <p>&copy; <span id="year"></span> Ganesh Vadlamuri. All rights reserved.</p>
+  </footer>
+
+  <!-- SEO Content - Hidden but crawlable -->
+  <div class="sr-only" aria-hidden="true">
+    <h2>Ganesh Vadlamuri - Professional Summary</h2>
+    <p>Senior Software Engineer with 6+ years of experience in Java, Spring Boot, microservices, AWS, GCP, Kafka, and cloud-native architectures. Currently working at Wells Fargo in Charlotte, North Carolina.</p>
+    
+    <h3>Technical Skills</h3>
+    <p>Java 8/11/17, Spring Boot, Spring MVC, Spring Security, Microservices, REST APIs, Apache Kafka, Docker, Kubernetes, AWS EC2, AWS S3, AWS Lambda, GCP, PostgreSQL, MongoDB, Redis, Jenkins, CI/CD, DevOps, Terraform, Git, Maven, Gradle</p>
+    
+    <h3>Work Experience</h3>
+    <p>Wells Fargo - Senior Assistant Vice President (Dec 2024 - Present) - Charlotte, NC</p>
+    <p>Texas State University - Graduate Software Engineer (Aug 2022 - May 2024) - San Marcos, TX</p>
+    <p>Amazon Web Services - Cloud Engineer (Mar 2022 - May 2022) - Remote</p>
+    <p>KSR Marine Exports - Software Engineer (Jan 2021 - Feb 2022) - India</p>
+    <p>GNR Health Care - Software Engineer (Aug 2018 - Dec 2020) - India</p>
+    
+    <h3>Education</h3>
+    <p>Master of Science in Computer Science - Texas State University, San Marcos, TX (May 2024) - GPA: 3.5/4.0</p>
+    
+    <h3>Certifications</h3>
+    <p>Google Cloud Digital Leader (Apr 2025), Google Gen AI Certified Prompt Design (Jul 2024), AWS Cloud Architect (May 2022), AWS Academy Graduate Cloud Foundations (Apr 2022), Joy of Computing using Python ELITE NPTEL (Apr 2021)</p>
+    
+    <h3>Contact Information</h3>
+    <p>Email: ganeshvadlamuri.root@gmail.com | Phone: +1 980-320-0468 | Location: Charlotte, North Carolina 28262</p>
+    <p>LinkedIn: https://linkedin.com/in/ganeshvadlamuri | GitHub: https://github.com/ganeshvadlamuri</p>
   </div>
 
-  <script src="assets/js/seo-enhancements.js"></script>
-  <script src="assets/js/page-transition.js"></script>
-  <script src="assets/js/update-title.js"></script>
-  <script src="assets/js/update-tagline.js"></script>
-  <script src="assets/js/creative-skills.js"></script>
-  <script src="assets/js/optimized-loader.js"></script>
-  <script src="assets/js/konami.js"></script>
-  <script src="assets/js/cursor-trail.js"></script>
-  <script src="assets/js/typing-terminal.js"></script>
-  <script src="assets/js/theme-toggle.js"></script>
-  <script src="assets/js/footer-security.js"></script>
-  <script src="assets/js/visitor-info.js"></script>
-  <script src="assets/js/top-features.js"></script>
-  <script src="assets/js/github-enhancements.js"></script>
-  <script src="assets/js/share-buttons.js"></script>
-  <script src="assets/js/github-stats-dashboard.js"></script>
-  <script src="assets/js/skills-radar.js"></script>
-  <script src="assets/js/related-posts.js"></script>
-  <script src="assets/js/projects.js" defer></script>
-  <script src="assets/js/animations.js" defer></script>
-  <script src="assets/js/enhanced-features.js" defer></script>
-  <script src="assets/js/scroll-animations.js" defer></script>
-  <script src="assets/js/matrix-effects.js" defer></script>
-  <script src="assets/js/contact-form.js" defer></script>
-  <script src="assets/js/index.js" defer></script>
-  <noscript><style>.hero-title{opacity:1!important}</style></noscript>
+  <!-- Back to Top -->
+  <div id="back-to-top" aria-label="Back to top">↑</div>
+
+  <script>
+    // Mobile Menu
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenu = document.getElementById('close-menu');
+    const menuLinks = mobileMenu.querySelectorAll('a');
+
+    mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.add('active'));
+    closeMenu.addEventListener('click', () => mobileMenu.classList.remove('active'));
+    menuLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('active')));
+
+    // Back to Top
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Typing Effect
+    const roles = ['Senior Software Engineer', 'Full Stack Developer', 'Cloud Architect', 'Microservices Expert'];
+    let roleIndex = 0, charIndex = 0, isDeleting = false;
+    const typingEl = document.getElementById('typing');
+    
+    function type() {
+      const current = roles[roleIndex];
+      typingEl.textContent = isDeleting ? current.substring(0, charIndex--) : current.substring(0, charIndex++);
+      
+      if (!isDeleting && charIndex === current.length) {
+        setTimeout(() => isDeleting = true, 2000);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+      }
+      
+      setTimeout(type, isDeleting ? 50 : 100);
+    }
+    type();
+
+    // Counter Animation
+    document.querySelectorAll('[data-count]').forEach(el => {
+      const target = +el.dataset.count;
+      let count = 0;
+      const increment = target / 50;
+      const timer = setInterval(() => {
+        count += increment;
+        if (count >= target) {
+          el.textContent = target + '+';
+          clearInterval(timer);
+        } else {
+          el.textContent = Math.ceil(count);
+        }
+      }, 30);
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Load Experience with Error Handling
+    fetch('./data/experience.json')
+      .then(r => {
+        if (!r.ok) throw new Error('Failed to load experience');
+        return r.json();
+      })
+      .then(data => {
+        const container = document.getElementById('exp-container');
+        container.innerHTML = '';
+        data.slice(0, 5).forEach(exp => {
+          const div = document.createElement('div');
+          div.className = 'glass rounded-xl p-6 hover:glow transition';
+          div.innerHTML = `
+            <div class="flex items-start gap-4">
+              <div class="flex-1">
+                <h3 class="text-xl font-bold accent">${exp.role}</h3>
+                <p class="text-gray-300">${exp.company}</p>
+                <p class="text-sm text-gray-500">${exp.start} - ${exp.end || 'Present'}</p>
+              </div>
+            </div>
+          `;
+          container.appendChild(div);
+        });
+      })
+      .catch(err => {
+        document.getElementById('exp-container').innerHTML = '<p class="text-center text-gray-500">Experience data unavailable</p>';
+        console.error(err);
+      });
+
+    // Load Skills with Error Handling
+    fetch('./data/skills.json')
+      .then(r => {
+        if (!r.ok) throw new Error('Failed to load skills');
+        return r.json();
+      })
+      .then(data => {
+        const container = document.getElementById('skills-container');
+        container.innerHTML = '';
+        data.forEach(cat => {
+          const div = document.createElement('div');
+          div.className = 'glass rounded-xl p-6';
+          div.innerHTML = `
+            <h3 class="text-lg font-bold mb-4 accent">${cat.category}</h3>
+            <div class="flex flex-wrap gap-2">
+              ${cat.skills.map(s => `<span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-sm">${s.name}</span>`).join('')}
+            </div>
+          `;
+          container.appendChild(div);
+        });
+      })
+      .catch(err => {
+        document.getElementById('skills-container').innerHTML = '<p class="text-center text-gray-500">Skills data unavailable</p>';
+        console.error(err);
+      });
+
+    // Load Projects with Error Handling
+    fetch('https://api.github.com/users/ganeshvadlamuri/repos?sort=updated&per_page=6')
+      .then(r => {
+        if (!r.ok) throw new Error('Failed to load projects');
+        return r.json();
+      })
+      .then(data => {
+        const container = document.getElementById('projects-container');
+        container.innerHTML = '';
+        data.forEach(repo => {
+          const a = document.createElement('a');
+          a.href = repo.html_url;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          a.className = 'glass rounded-xl p-6 hover:glow transition block';
+          a.innerHTML = `
+            <h3 class="text-lg font-bold mb-2 accent">${repo.name}</h3>
+            <p class="text-sm text-gray-400 mb-4">${repo.description || 'No description available'}</p>
+            <div class="flex items-center gap-3 text-xs text-gray-500">
+              <span>⭐ ${repo.stargazers_count}</span>
+              <span>🔱 ${repo.forks_count}</span>
+              ${repo.language ? `<span class="px-2 py-1 bg-accent/10 rounded">${repo.language}</span>` : ''}
+            </div>
+          `;
+          container.appendChild(a);
+        });
+      })
+      .catch(err => {
+        document.getElementById('projects-container').innerHTML = '<p class="text-center text-gray-500">Projects data unavailable</p>';
+        console.error(err);
+      });
+  </script>
 </body>
 </html>
