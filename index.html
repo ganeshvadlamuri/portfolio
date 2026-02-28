@@ -72,33 +72,103 @@
   
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #0a0f1e 0%, #1a1f3a 100%); color: #e2e8f0; position: relative; overflow-x: hidden; }
-    body::before { content: ''; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%); pointer-events: none; z-index: 0; }
+    body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #0a0f1e 0%, #1a1f3a 50%, #0f1729 100%); color: #e2e8f0; position: relative; overflow-x: hidden; }
+    
+    /* Animated Particles Background with Multiple Colors */
+    body::before { content: ''; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.12) 0%, transparent 50%), radial-gradient(circle at 40% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%), radial-gradient(circle at 60% 70%, rgba(236, 72, 153, 0.08) 0%, transparent 50%); pointer-events: none; z-index: 0; animation: pulse 8s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.8; } }
+    
     main { position: relative; z-index: 1; }
+    
+    /* Rich Color Palette */
     .accent { color: #10b981; }
+    .accent-blue { color: #3b82f6; }
+    .accent-purple { color: #8b5cf6; }
+    .accent-pink { color: #ec4899; }
+    .accent-orange { color: #f59e0b; }
+    .accent-cyan { color: #06b6d4; }
+    
+    /* Gradient Text Effects */
+    .gradient-emerald { background: linear-gradient(135deg, #10b981, #059669); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .gradient-blue { background: linear-gradient(135deg, #3b82f6, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .gradient-purple { background: linear-gradient(135deg, #8b5cf6, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .gradient-rainbow { background: linear-gradient(135deg, #10b981, #3b82f6, #8b5cf6, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 200% auto; animation: gradientShift 3s ease infinite; }
+    @keyframes gradientShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+    
     .bg-accent { background: linear-gradient(135deg, #10b981, #059669); }
+    .bg-gradient-blue { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+    .bg-gradient-purple { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+    .bg-gradient-multi { background: linear-gradient(135deg, #10b981 0%, #3b82f6 50%, #8b5cf6 100%); }
+    
+    /* Enhanced Glass Effect with Color Variations */
     .glass { background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2); backdrop-filter: blur(20px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-    .glass:hover { background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.4); transform: translateY(-8px) scale(1.02); }
-    .glow { box-shadow: 0 0 30px rgba(16, 185, 129, 0.4), 0 0 60px rgba(16, 185, 129, 0.2); }
+    .glass:hover { background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.5); transform: translateY(-12px) scale(1.03); box-shadow: 0 20px 60px rgba(16, 185, 129, 0.25); }
+    .glass-blue { background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.2); backdrop-filter: blur(20px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .glass-blue:hover { background: rgba(59, 130, 246, 0.12); border-color: rgba(59, 130, 246, 0.5); transform: translateY(-12px) scale(1.03); box-shadow: 0 20px 60px rgba(59, 130, 246, 0.25); }
+    .glass-purple { background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.2); backdrop-filter: blur(20px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .glass-purple:hover { background: rgba(139, 92, 246, 0.12); border-color: rgba(139, 92, 246, 0.5); transform: translateY(-12px) scale(1.03); box-shadow: 0 20px 60px rgba(139, 92, 246, 0.25); }
+    .glass-pink { background: rgba(236, 72, 153, 0.05); border: 1px solid rgba(236, 72, 153, 0.2); backdrop-filter: blur(20px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .glass-pink:hover { background: rgba(236, 72, 153, 0.12); border-color: rgba(236, 72, 153, 0.5); transform: translateY(-12px) scale(1.03); box-shadow: 0 20px 60px rgba(236, 72, 153, 0.25); }
+    .glow { box-shadow: 0 0 40px rgba(16, 185, 129, 0.5), 0 0 80px rgba(16, 185, 129, 0.3); }
+    .glow-blue { box-shadow: 0 0 40px rgba(59, 130, 246, 0.5), 0 0 80px rgba(59, 130, 246, 0.3); }
+    .glow-purple { box-shadow: 0 0 40px rgba(139, 92, 246, 0.5), 0 0 80px rgba(139, 92, 246, 0.3); }
+    
     nav { position: sticky; top: 0; z-index: 50; background: rgba(10, 15, 30, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(16, 185, 129, 0.1); }
-    .typing::after { content: '|'; animation: blink 1s infinite; }
+    
+    /* Typing Animation */
+    .typing::after { content: '|'; animation: blink 1s infinite; color: #10b981; }
     @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
-    .stat-card, .cert-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; }
-    .stat-card::before, .cert-card::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent); transition: left 0.5s; }
+    
+    /* Enhanced Cards */
+    .stat-card, .cert-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; cursor: pointer; }
+    .stat-card::before, .cert-card::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.15), transparent); transition: left 0.6s; }
     .stat-card:hover::before, .cert-card:hover::before { left: 100%; }
-    .stat-card:hover, .cert-card:hover { transform: translateY(-10px) scale(1.05); box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3); }
-    #back-to-top { position: fixed; bottom: 30px; right: 30px; background: linear-gradient(135deg, #10b981, #059669); color: #000; width: 56px; height: 56px; border-radius: 50%; display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 100; transition: all 0.3s; font-size: 24px; font-weight: bold; box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4); }
-    #back-to-top:hover { transform: translateY(-8px) scale(1.1); box-shadow: 0 8px 30px rgba(16, 185, 129, 0.6); }
-    .loader { border: 4px solid rgba(16, 185, 129, 0.2); border-top: 4px solid #10b981; border-radius: 50%; width: 50px; height: 50px; animation: spin 0.8s linear infinite; margin: 60px auto; }
+    .stat-card:hover, .cert-card:hover { transform: translateY(-12px) scale(1.05); box-shadow: 0 25px 50px rgba(16, 185, 129, 0.35); }
+    
+    /* Prominent CTA */
+    .cta-primary { background: linear-gradient(135deg, #10b981, #059669); color: #000; padding: 1.25rem 3rem; font-size: 1.125rem; font-weight: 800; border-radius: 12px; box-shadow: 0 10px 40px rgba(16, 185, 129, 0.4); transition: all 0.3s; position: relative; overflow: hidden; }
+    .cta-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transition: left 0.5s; }
+    .cta-primary:hover::before { left: 100%; }
+    .cta-primary:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 15px 60px rgba(16, 185, 129, 0.6); }
+    
+    #back-to-top { position: fixed; bottom: 30px; right: 30px; background: linear-gradient(135deg, #10b981, #059669); color: #000; width: 60px; height: 60px; border-radius: 50%; display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 100; transition: all 0.3s; font-size: 28px; font-weight: bold; box-shadow: 0 6px 25px rgba(16, 185, 129, 0.5); }
+    #back-to-top:hover { transform: translateY(-10px) scale(1.15); box-shadow: 0 10px 40px rgba(16, 185, 129, 0.7); }
+    
+    /* Modern Loader */
+    .loader { width: 60px; height: 60px; margin: 80px auto; position: relative; }
+    .loader::before, .loader::after { content: ''; position: absolute; border-radius: 50%; border: 4px solid transparent; border-top-color: #10b981; width: 100%; height: 100%; animation: spin 1.2s linear infinite; }
+    .loader::after { border-top-color: #3b82f6; animation-duration: 1.8s; animation-direction: reverse; }
     @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    
     .mobile-menu { transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
     .mobile-menu.active { transform: translateX(0); }
-    .fade-in { animation: fadeIn 0.6s ease-out; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    .tech-icon { width: 48px; height: 48px; display: inline-flex; align-items: center; justify-content: center; background: rgba(16, 185, 129, 0.1); border: 2px solid rgba(16, 185, 129, 0.3); border-radius: 12px; font-size: 24px; transition: all 0.3s; }
-    .tech-icon:hover { background: rgba(16, 185, 129, 0.2); border-color: #10b981; transform: scale(1.1) rotate(5deg); }
+    
+    /* Scroll Reveal Animation */
+    .fade-in { animation: fadeIn 0.8s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    
+    /* Tech Stack Logos */
+    .tech-logo { width: 80px; height: 80px; display: inline-flex; align-items: center; justify-content: center; background: rgba(16, 185, 129, 0.08); border: 2px solid rgba(16, 185, 129, 0.25); border-radius: 16px; font-size: 40px; transition: all 0.4s; position: relative; overflow: hidden; }
+    .tech-logo::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.2), transparent); transition: left 0.5s; }
+    .tech-logo:hover::before { left: 100%; }
+    .tech-logo:hover { background: rgba(16, 185, 129, 0.15); border-color: #10b981; transform: scale(1.15) rotate(5deg); box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3); }
+    
+    .tech-icon { width: 56px; height: 56px; display: inline-flex; align-items: center; justify-content: center; background: rgba(16, 185, 129, 0.1); border: 2px solid rgba(16, 185, 129, 0.3); border-radius: 14px; font-size: 28px; transition: all 0.3s; }
+    .tech-icon:hover { background: rgba(16, 185, 129, 0.2); border-color: #10b981; transform: scale(1.15) rotate(5deg); }
+    
+    /* Hero Enhancements */
+    .hero-glow { animation: heroGlow 3s ease-in-out infinite; }
+    @keyframes heroGlow { 0%, 100% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.5); } 50% { box-shadow: 0 0 80px rgba(59, 130, 246, 0.7), 0 0 120px rgba(139, 92, 246, 0.4); } }
+    
+    /* Section Borders & Separators */
+    .section-border { border-top: 1px solid rgba(59, 130, 246, 0.15); border-bottom: 1px solid rgba(59, 130, 246, 0.15); }
+    .section-border-top { border-top: 1px solid rgba(59, 130, 246, 0.15); }
+    .section-border-bottom { border-bottom: 1px solid rgba(59, 130, 246, 0.15); }
+    .section-divider { position: relative; }
+    .section-divider::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: linear-gradient(90deg, transparent, #3b82f6, transparent); }
+    .section-divider::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: linear-gradient(90deg, transparent, #8b5cf6, transparent); }
   </style>
 </head>
 <body>
@@ -114,9 +184,10 @@
       <!-- Desktop Menu -->
       <div class="hidden md:flex gap-8 items-center">
         <a href="#about" class="hover:text-accent transition">About</a>
+        <a href="#journey" class="hover:text-accent transition">Journey</a>
         <a href="#experience" class="hover:text-accent transition">Experience</a>
         <a href="#skills" class="hover:text-accent transition">Skills</a>
-        <a href="#certifications" class="hover:text-accent transition">Certifications</a>
+        <a href="#achievements" class="hover:text-accent transition">Achievements</a>
         <a href="#projects" class="hover:text-accent transition">Projects</a>
         <a href="#contact" class="px-6 py-2 bg-accent text-black font-semibold rounded-lg hover:opacity-90 transition">Contact</a>
       </div>
@@ -133,10 +204,11 @@
         <button id="close-menu" class="text-2xl float-right" aria-label="Close menu">✕</button>
         <div class="clear-both pt-8 space-y-4">
           <a href="#about" class="block hover:text-accent transition">About</a>
+          <a href="#journey" class="block hover:text-accent transition">Journey</a>
           <a href="#experience" class="block hover:text-accent transition">Experience</a>
           <a href="#skills" class="block hover:text-accent transition">Skills</a>
-          <a href="#certifications" class="block hover:text-accent transition">Certifications</a>
-           <a href="#projects" class="block hover:text-accent transition">Projects</a>
+          <a href="#achievements" class="block hover:text-accent transition">Achievements</a>
+          <a href="#projects" class="block hover:text-accent transition">Projects</a>
           <a href="#contact" class="block px-6 py-2 bg-accent text-black font-semibold rounded-lg text-center">Contact</a>
         </div>
       </div>
@@ -145,44 +217,194 @@
 
   <main id="main">
     <!-- Hero -->
-    <section class="min-h-screen flex items-center justify-center px-6">
-      <div class="max-w-4xl text-center">
-        <div class="mb-8">
-          <img src="assets/profile.jpg" alt="Ganesh Vadlamuri - Senior Software Engineer" class="w-32 h-32 rounded-full mx-auto border-4 border-accent/30 shadow-2xl" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22128%22 height=%22128%22%3E%3Crect fill=%22%2310b981%22 width=%22128%22 height=%22128%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2248%22 fill=%22%23000%22%3EGV%3C/text%3E%3C/svg%3E'">
+    <section class="min-h-screen flex items-center justify-center px-6 py-32">
+      <div class="max-w-5xl text-center">
+        <div class="mb-12">
+          <img src="assets/profile.jpg" alt="Ganesh Vadlamuri - Senior Software Engineer" class="w-48 h-48 rounded-full mx-auto border-4 border-accent/40 shadow-2xl hero-glow" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22192%22 height=%22192%22%3E%3Crect fill=%22%2310b981%22 width=%22192%22 height=%22192%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2272%22 fill=%22%23000%22 font-weight=%22bold%22%3EGV%3C/text%3E%3C/svg%3E'">
         </div>
-        <h1 class="text-5xl md:text-7xl font-bold mb-6">
-          Hi, I'm <span class="accent">Ganesh Vadlamuri</span>
+        <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight">
+          Hi, I'm <span class="gradient-rainbow">Ganesh Vadlamuri</span>
         </h1>
-        <p class="text-2xl md:text-3xl mb-4 typing" id="typing" role="status" aria-live="polite"></p>
-        <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-          Senior Software Engineer at Wells Fargo with 6+ years building scalable microservices, fraud detection systems, and cloud-native applications using Java, Spring Boot, Kafka, AWS, and GCP.
+        <p class="text-3xl md:text-4xl mb-6 typing font-bold" id="typing" role="status" aria-live="polite"></p>
+        <p class="text-xl md:text-2xl text-gray-300 mb-16 max-w-3xl mx-auto leading-relaxed">
+          Senior Software Engineer at <span class="accent-blue font-semibold">Wells Fargo</span> with 6+ years building scalable microservices, fraud detection systems, and cloud-native applications.
         </p>
-        <div class="flex gap-4 justify-center flex-wrap">
-          <a href="#contact" class="px-8 py-4 bg-accent text-black font-bold rounded-lg hover:opacity-90 transition">Get In Touch</a>
-          <a href="assets/resume.pdf" class="px-8 py-4 glass rounded-lg font-semibold hover:glow transition" download>Download Resume</a>
+        
+        <!-- Prominent CTA -->
+        <div class="flex gap-6 justify-center flex-wrap mb-20">
+          <a href="#contact" class="cta-primary">Let's Work Together →</a>
+          <a href="assets/resume.pdf" class="px-10 py-5 glass rounded-xl font-bold hover:glow transition text-lg" download>Download Resume</a>
+        </div>
+        
+        <!-- Tech Stack Logos -->
+        <div class="mb-16">
+          <p class="text-sm text-gray-500 mb-6 uppercase tracking-wider font-semibold">Core Tech Stack</p>
+          <div class="flex flex-wrap gap-6 justify-center items-center">
+            <div class="tech-logo glass" title="Java" style="border-color: rgba(236, 72, 153, 0.3);">☕</div>
+            <div class="tech-logo glass-blue" title="Spring Boot" style="border-color: rgba(59, 130, 246, 0.3);">🍃</div>
+            <div class="tech-logo glass-purple" title="AWS" style="border-color: rgba(139, 92, 246, 0.3);">☁️</div>
+            <div class="tech-logo glass-pink" title="Kafka" style="border-color: rgba(236, 72, 153, 0.3);">📨</div>
+            <div class="tech-logo glass" title="Docker" style="border-color: rgba(16, 185, 129, 0.3);">🐳</div>
+            <div class="tech-logo glass-blue" title="Kubernetes" style="border-color: rgba(59, 130, 246, 0.3);">⚓</div>
+            <div class="tech-logo glass-purple" title="PostgreSQL" style="border-color: rgba(139, 92, 246, 0.3);">🐘</div>
+            <div class="tech-logo glass-pink" title="MongoDB" style="border-color: rgba(236, 72, 153, 0.3);">🍃</div>
+          </div>
         </div>
         
         <!-- Live Stats -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16 max-w-2xl mx-auto">
-          <div class="stat-card glass rounded-xl p-6">
-            <div class="text-4xl font-bold accent" data-count="6">0</div>
-            <div class="text-sm text-gray-400 mt-2">Years Experience</div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
+          <div class="stat-card glass rounded-2xl p-8">
+            <div class="text-5xl font-black accent mb-3" data-count="6">0</div>
+            <div class="text-base text-gray-400 font-medium">Years Experience</div>
           </div>
-          <div class="stat-card glass rounded-xl p-6">
-            <div class="text-4xl font-bold accent" data-count="50">0</div>
-            <div class="text-sm text-gray-400 mt-2">Projects Delivered</div>
+          <div class="stat-card glass rounded-2xl p-8">
+            <div class="text-5xl font-black accent-blue mb-3" data-count="50">0</div>
+            <div class="text-base text-gray-400 font-medium">Projects Delivered</div>
           </div>
-          <div class="stat-card glass rounded-xl p-6">
-            <div class="text-4xl font-bold accent" data-count="5">0</div>
-            <div class="text-sm text-gray-400 mt-2">Companies</div>
+          <div class="stat-card glass rounded-2xl p-8">
+            <div class="text-5xl font-black accent-purple mb-3" data-count="5">0</div>
+            <div class="text-base text-gray-400 font-medium">Companies</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What I Do Best -->
+    <section class="py-32 px-6 bg-black/20 section-border">
+      <div class="max-w-6xl mx-auto section-divider">
+        <h2 class="text-5xl md:text-6xl font-black mb-20 text-center">What I <span class="accent">Do Best</span></h2>
+        <div class="grid md:grid-cols-3 gap-10">
+          <div class="glass rounded-3xl p-10 text-center hover:scale-105 transition-all duration-500">
+            <div class="text-6xl mb-6">⚡</div>
+            <h3 class="text-2xl font-bold mb-4 gradient-emerald">Microservices Architecture</h3>
+            <p class="text-gray-400 leading-relaxed">Designing and building scalable, resilient microservices using Spring Boot, Kafka, and event-driven patterns for high-volume financial systems</p>
+          </div>
+          <div class="glass-blue rounded-3xl p-10 text-center hover:scale-105 transition-all duration-500">
+            <div class="text-6xl mb-6">☁️</div>
+            <h3 class="text-2xl font-bold mb-4 gradient-blue">Cloud-Native Solutions</h3>
+            <p class="text-gray-400 leading-relaxed">Architecting and deploying containerized applications on AWS, GCP, and Kubernetes with Infrastructure as Code using Terraform</p>
+          </div>
+          <div class="glass-purple rounded-3xl p-10 text-center hover:scale-105 transition-all duration-500">
+            <div class="text-6xl mb-6">🔒</div>
+            <h3 class="text-2xl font-bold mb-4 gradient-purple">Fraud Detection Systems</h3>
+            <p class="text-gray-400 leading-relaxed">Building real-time transaction monitoring, risk analytics, and regulatory compliance systems processing millions of events daily</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Journey Timeline -->
+    <section id="journey" class="py-32 px-6 section-border-bottom">
+      <div class="max-w-5xl mx-auto section-divider">
+        <h2 class="text-4xl font-bold mb-12 text-center">Professional <span class="accent">Journey</span></h2>
+        <div class="space-y-8">
+          <div class="glass rounded-2xl p-8 border-l-4 border-accent">
+            <div class="flex items-start gap-4">
+              <div class="tech-icon">🏦</div>
+              <div class="flex-1">
+                <div class="flex justify-between items-start flex-wrap gap-2">
+                  <h3 class="text-2xl font-bold accent">Wells Fargo</h3>
+                  <span class="text-sm text-gray-500">Dec 2024 - Present</span>
+                </div>
+                <p class="text-lg text-gray-300 mb-2">Senior Assistant Vice President</p>
+                <p class="text-gray-400 mb-4">Leading fraud detection modernization, upgrading Java 11→17 & Spring Boot 2→3, building event-driven microservices with Kafka, and migrating to GKE/Kubernetes</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">Java 17</span>
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">Spring Boot 3</span>
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">Kafka</span>
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">GCP</span>
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">Kubernetes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="glass rounded-2xl p-8 border-l-4 border-accent/50">
+            <div class="flex items-start gap-4">
+              <div class="tech-icon">🎓</div>
+              <div class="flex-1">
+                <div class="flex justify-between items-start flex-wrap gap-2">
+                  <h3 class="text-2xl font-bold accent">Texas State University</h3>
+                  <span class="text-sm text-gray-500">Aug 2022 - May 2024</span>
+                </div>
+                <p class="text-lg text-gray-300 mb-2">Graduate Software Engineer</p>
+                <p class="text-gray-400 mb-4">Built campus platforms with Spring Boot microservices, Angular frontends, deployed on AWS with Terraform, and implemented CI/CD pipelines</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">Spring Boot</span>
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">Angular</span>
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">AWS</span>
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">Terraform</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="glass rounded-2xl p-8 border-l-4 border-accent/50">
+            <div class="flex items-start gap-4">
+              <div class="tech-icon">☁️</div>
+              <div class="flex-1">
+                <div class="flex justify-between items-start flex-wrap gap-2">
+                  <h3 class="text-2xl font-bold accent">Amazon Web Services</h3>
+                  <span class="text-sm text-gray-500">Mar 2022 - May 2022</span>
+                </div>
+                <p class="text-lg text-gray-300 mb-2">Cloud Engineer</p>
+                <p class="text-gray-400 mb-4">Provisioned secure AWS infrastructure with Terraform, configured VPCs, EC2 Auto Scaling, RDS, and implemented CloudWatch monitoring</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">AWS</span>
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">Terraform</span>
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">Python</span>
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">CloudWatch</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="glass rounded-2xl p-8 border-l-4 border-accent/30">
+            <div class="flex items-start gap-4">
+              <div class="tech-icon">💼</div>
+              <div class="flex-1">
+                <div class="flex justify-between items-start flex-wrap gap-2">
+                  <h3 class="text-2xl font-bold accent">KSR Marine Exports</h3>
+                  <span class="text-sm text-gray-500">Jan 2021 - Feb 2022</span>
+                </div>
+                <p class="text-lg text-gray-300 mb-2">Software Engineer</p>
+                <p class="text-gray-400 mb-4">Developed full-stack applications with Spring Boot REST APIs, Angular frontends, MySQL/PostgreSQL databases, and Docker containerization</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">Java</span>
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">Angular</span>
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">PostgreSQL</span>
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">Docker</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="glass rounded-2xl p-8 border-l-4 border-accent/30">
+            <div class="flex items-start gap-4">
+              <div class="tech-icon">🏥</div>
+              <div class="flex-1">
+                <div class="flex justify-between items-start flex-wrap gap-2">
+                  <h3 class="text-2xl font-bold accent">GNR Health Care</h3>
+                  <span class="text-sm text-gray-500">Aug 2018 - Dec 2020</span>
+                </div>
+                <p class="text-lg text-gray-300 mb-2">Software Engineer</p>
+                <p class="text-gray-400 mb-4">Built ETL pipelines for healthcare data, developed REST APIs with Spring Boot, optimized SQL queries, and implemented Splunk monitoring</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">Python</span>
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">Spring Boot</span>
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">SQL</span>
+                  <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs">Splunk</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="py-20 px-6">
-      <div class="max-w-5xl mx-auto">
+    <section id="about" class="py-32 px-6 section-border">
+      <div class="max-w-5xl mx-auto section-divider">
         <h2 class="text-4xl font-bold mb-12 text-center">About <span class="accent">Me</span></h2>
         <div class="grid md:grid-cols-2 gap-8">
           <div class="glass rounded-2xl p-8 fade-in">
@@ -214,8 +436,8 @@
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="py-20 px-6 bg-black/20">
-      <div class="max-w-5xl mx-auto">
+    <section id="experience" class="py-32 px-6 bg-black/20 section-border">
+      <div class="max-w-5xl mx-auto section-divider">
         <h2 class="text-4xl font-bold mb-12 text-center">Work <span class="accent">Experience</span></h2>
         <div id="exp-container" class="space-y-6">
           <div class="loader"></div>
@@ -224,8 +446,8 @@
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="py-20 px-6">
-      <div class="max-w-5xl mx-auto">
+    <section id="skills" class="py-32 px-6 section-border-bottom">
+      <div class="max-w-5xl mx-auto section-divider">
         <h2 class="text-4xl font-bold mb-12 text-center">Technical <span class="accent">Skills</span></h2>
         <div id="skills-container" class="grid md:grid-cols-2 gap-6">
           <div class="loader"></div>
@@ -234,9 +456,32 @@
     </section>
 
     <!-- Certifications -->
-    <section id="certifications" class="py-20 px-6 bg-black/20">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-4xl font-bold mb-12 text-center">Certifications <span class="accent">& Achievements</span></h2>
+    <section id="achievements" class="py-32 px-6 bg-black/20 section-border">
+      <div class="max-w-5xl mx-auto section-divider">
+        <h2 class="text-4xl font-bold mb-12 text-center">Achievements & <span class="accent">Impact</span></h2>
+        
+        <!-- Impact Metrics -->
+        <div class="grid md:grid-cols-4 gap-6 mb-12">
+          <div class="glass rounded-xl p-6 text-center">
+            <div class="text-3xl font-bold accent mb-2">Zero</div>
+            <p class="text-sm text-gray-400">Downtime Deployments</p>
+          </div>
+          <div class="glass rounded-xl p-6 text-center">
+            <div class="text-3xl font-bold accent mb-2">Millions</div>
+            <p class="text-sm text-gray-400">Transactions Processed Daily</p>
+          </div>
+          <div class="glass rounded-xl p-6 text-center">
+            <div class="text-3xl font-bold accent mb-2">40%</div>
+            <p class="text-sm text-gray-400">Performance Improvement</p>
+          </div>
+          <div class="glass rounded-xl p-6 text-center">
+            <div class="text-3xl font-bold accent mb-2">5+</div>
+            <p class="text-sm text-gray-400">Cloud Certifications</p>
+          </div>
+        </div>
+        
+        <!-- Certifications -->
+        <h3 class="text-2xl font-bold mb-8 text-center">Professional <span class="accent">Certifications</span></h3>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="cert-card glass rounded-xl p-8">
             <div class="tech-icon mb-4 mx-auto">☁️</div>
@@ -268,8 +513,8 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="py-20 px-6">
-      <div class="max-w-5xl mx-auto">
+    <section id="projects" class="py-32 px-6 section-border-bottom">
+      <div class="max-w-5xl mx-auto section-divider">
         <h2 class="text-4xl font-bold mb-12 text-center">Featured <span class="accent">Projects</span></h2>
         <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="loader"></div>
@@ -278,8 +523,8 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-20 px-6 bg-black/20">
-      <div class="max-w-4xl mx-auto text-center">
+    <section id="contact" class="py-32 px-6 bg-black/20 section-border">
+      <div class="max-w-4xl mx-auto text-center section-divider">
         <h2 class="text-4xl font-bold mb-12">Get In <span class="accent">Touch</span></h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
           <a href="mailto:ganeshvadlamuri.root@gmail.com" class="glass rounded-2xl p-10 hover:glow transition group" aria-label="Email Ganesh Vadlamuri">

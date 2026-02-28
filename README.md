@@ -1,65 +1,61 @@
-# Cyber Security Portfolio Template
+# Ganesh Vadlamuri - Portfolio
 
-This repo contains a simple, fast, static template you can host on GitHub Pages. It’s plain HTML/CSS/JS (no build step).
+Modern, minimal portfolio website. Single HTML file with JSON data.
 
-## Structure (one file to update)
+## 🚀 Quick Start
 
-- `index.html` – Home feed. Fetches posts from JSON and renders cards.
-- `post.html` – Single article view. Loads by `?slug=...` from the same JSON.
-- `data/posts.json` – The only file you edit to publish. Newest first.
-- `assets/` – Images and static files.
-- `.nojekyll` – Disable Jekyll on Pages.
+1. **Run Cleanup**: Double-click `CLEANUP-ALL.bat` to remove unused files
+2. **Edit Content**: Update `data/skills.json` and `data/experience.json`
+3. **Deploy**: Push to GitHub Pages
 
-### Editing `data/posts.json`
+## 📁 Files (After Cleanup)
 
-Each post object supports:
-
-```json
-{
-  "slug": "my-post",
-  "title": "My Post",
-  "date": "2025-11-09",
-  "featured": true,
-  "comments": 0,
-  "categories": ["Security"],
-  "img": "assets/hero.jpg",
-  "excerpt": "Short summary for the feed.",
-  "content": "# Markdown Title\nYour body in markdown."
-}
+```
+portfolio/
+├── index.html              # Main portfolio (all-in-one)
+├── data/
+│   ├── skills.json        # Your skills
+│   └── experience.json    # Your work history
+├── assets/
+│   └── profile.jpg        # Your photo
+└── .nojekyll              # GitHub Pages config
 ```
 
-That’s it — add a new object (at the top) and push.
+## ✏️ How to Update
 
-## Quick Deploy (GitHub Pages)
+### Update Skills
+Edit `data/skills.json` - Add/remove skills by category
 
-1. Create a new repository on GitHub (public). Name it either:
-   - `USERNAME.github.io` for a user site, or
-   - Any name for a project site.
-2. Add these files to the repo and push to `main`:
-   - `index.html`, `.nojekyll`, plus an `assets/` folder for images.
-3. In GitHub, open: Settings → Pages
-   - Source: select `Deploy from a branch`
-   - Branch: `main` and folder `/ (root)`, then Save.
-4. Wait ~1–2 minutes. Your site will be live at:
-   - `https://USERNAME.github.io` (user site) or
-   - `https://USERNAME.github.io/REPO` (project site).
+### Update Experience
+Edit `data/experience.json` - Add/remove jobs
 
-### Optional: Custom Domain
+### Update Personal Info
+Edit `index.html` - Search for your name, email, phone, links
 
-1. In Settings → Pages, set your custom domain (e.g., `example.com`).
-2. In your DNS, create CNAME for the root or `www` pointing to `USERNAME.github.io`.
-3. GitHub will place a `CNAME` file in the repo automatically (or add one manually).
+### Change Colors
+Edit `index.html` CSS section - Change `#3b82f6` (blue) to your color
 
-## Local Preview
+## 📖 Documentation
 
-- Open `index.html` in a browser for the feed.
-- Click a card or open `post.html?slug=your-slug` for a single post.
+- `QUICK-UPDATE.md` - Quick reference for common updates
+- `PORTFOLIO-GUIDE.md` - Complete guide with examples
 
-## Notes
+## 🌐 Deploy to GitHub Pages
 
-- `.nojekyll` disables Jekyll processing so files/folders starting with `_` are served as-is.
-- Everything is self-contained and easy to tweak. No frameworks.
+1. Create repo: `yourusername.github.io`
+2. Upload files
+3. Settings → Pages → Deploy from `main` branch
+4. Live at: `https://yourusername.github.io`
 
+## ✨ Features
 
+- Single HTML file (no build process)
+- Auto-loads projects from GitHub API
+- Mobile responsive
+- SEO optimized
+- Modern animations
+- Fast loading
 
+---
 
+**Contact**: ganeshvadlamuri.root@gmail.com

@@ -1,3 +1,0 @@
-Contact: mailto:ganeshvadlamuri.root@gmail.com
-Preferred-Languages: en
-Canonical: https://ganeshvadlamuri.github.io/.well-known/security.txt
