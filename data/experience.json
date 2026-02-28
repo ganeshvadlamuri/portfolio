@@ -1,13 +1,21 @@
 [
   {
     "company": "Wells Fargo",
-    "role": "Senior Software Engineer",
+    "role": "Senior Assistant Vice President",
     "location": "Charlotte, North Carolina",
     "start": "2024-12-01",
     "end": null,
     "logo": "https://logo.clearbit.com/wellsfargo.com",
-    "description": "Leading fraud detection modernization with OpenShift, GCP, Java 17, Spring Boot 3.x, Kafka, and GenAI PoC.",
-    "technologies": ["Java 17", "Spring Boot 3.x", "OpenShift", "GCP", "Kafka", "MongoDB", "Oracle", "Docker", "Jenkins", "Splunk", "GenAI"]
+    "highlights": [
+      "Building enterprise fraud detection and transaction monitoring systems",
+      "Led Java 11→17 and Spring Boot 2.x→3.x modernization (zero downtime)",
+      "Engineered event-driven microservices with Kafka for real-time processing",
+      "Designed secure REST APIs for fraud case management",
+      "Deployed on Kubernetes/OpenShift with Infrastructure as Code",
+      "Implemented Splunk observability and GCP Cloud Logging",
+      "Mentored junior engineers on secure coding practices"
+    ],
+    "technologies": ["Java 17", "Spring Boot 3.x", "Spring Security", "OpenShift", "GCP", "GKE", "Kafka", "Jakarta JMS", "MongoDB", "Oracle", "PostgreSQL", "Docker", "Jenkins", "Splunk", "Angular", "React", "Terraform"]
   },
   {
     "company": "Texas State University",
@@ -16,18 +24,34 @@
     "start": "2022-08-01",
     "end": "2024-05-01",
     "logo": "https://logo.clearbit.com/txstate.edu",
-    "description": "Developed university systems with Java, Spring Boot, Angular, React. Managed AWS infrastructure and created analytics dashboards.",
-    "technologies": ["Java", "Spring Boot", "Angular", "React", "AWS", "Terraform", "Docker", "Kubernetes", "MySQL", "PostgreSQL", "Tableau", "Power BI"]
+    "highlights": [
+      "Maintained university platforms (CLC, SLAC, Campus Recreation)",
+      "Built backend services for student coaching and appointment workflows",
+      "Developed RESTful APIs integrating student information systems",
+      "Created frontend enhancements with Angular/JavaScript",
+      "Containerized services with Docker and Kubernetes",
+      "Implemented AWS CloudWatch monitoring and alerting",
+      "Provided zero-downtime production support during academic sessions"
+    ],
+    "technologies": ["Java", "Spring Boot", "Angular", "JavaScript", "AWS", "Terraform", "Docker", "Kubernetes", "MySQL", "PostgreSQL", "AWS CloudWatch", "Git"]
   },
   {
     "company": "Amazon Web Services",
     "role": "Cloud Engineer",
-    "location": "Remote, India",
+    "location": "Remote",
     "start": "2022-03-01",
     "end": "2022-05-01",
     "logo": "https://logo.clearbit.com/aws.amazon.com",
-    "description": "Designed scalable cloud solutions on AWS with focus on security, automation using Python, and Infrastructure as Code with Terraform.",
-    "technologies": ["AWS", "EC2", "S3", "RDS", "CloudWatch", "Python", "Terraform", "Bash", "CI/CD"]
+    "highlights": [
+      "Provisioned secure AWS infrastructure for internal and customer workloads",
+      "Developed reusable Terraform modules (VPCs, subnets, security, IAM)",
+      "Configured Auto Scaling Groups and Application Load Balancers",
+      "Implemented least-privilege IAM roles and policies",
+      "Automated infrastructure provisioning with Python and Bash",
+      "Enabled encryption at rest and in transit using AWS KMS",
+      "Configured CloudWatch metrics, alarms, and log groups"
+    ],
+    "technologies": ["AWS", "EC2", "S3", "RDS", "Lambda", "IAM", "VPC", "CloudWatch", "Terraform", "Python", "Bash", "Jenkins", "Git", "Maven"]
   },
   {
     "company": "KSR Marine Exports",
@@ -36,8 +60,16 @@
     "start": "2021-01-01",
     "end": "2022-02-01",
     "logo": "https://via.placeholder.com/40/22c55e/000?text=KSR",
-    "description": "Built RESTful APIs, ETL pipelines with AWS Glue and Azure Data Factory. Created dashboards in Tableau and Power BI.",
-    "technologies": ["Java", "Python", "PostgreSQL", "AWS S3", "AWS Glue", "Azure Data Factory", "Tableau", "Power BI", "Jenkins", "Splunk"]
+    "highlights": [
+      "Designed backend services with Java and Spring Boot",
+      "Built responsive frontend applications with Angular/JavaScript",
+      "Developed REST APIs with Spring Security authentication",
+      "Integrated internal systems with MySQL/PostgreSQL databases",
+      "Designed optimized database schemas and complex SQL queries",
+      "Implemented asynchronous processing and scheduled jobs",
+      "Automated CI/CD pipelines with Jenkins and Docker"
+    ],
+    "technologies": ["Java", "Spring Boot", "Angular", "JavaScript", "Python", "PostgreSQL", "MySQL", "MongoDB", "Docker", "Jenkins", "Spring Security", "Splunk"]
   },
   {
     "company": "GNR Health Care",
@@ -46,7 +78,15 @@
     "start": "2018-08-01",
     "end": "2020-12-01",
     "logo": "https://via.placeholder.com/40/22c55e/000?text=GNR",
-    "description": "Designed HIPAA-compliant ETL pipelines for healthcare data. Built dashboards tracking billing and claims KPIs, reducing report time by 30%.",
-    "technologies": ["Python", "SQL", "Pandas", "Power BI", "Tableau", "MySQL", "PostgreSQL", "Jenkins", "Splunk", "AWS S3"]
+    "highlights": [
+      "Designed healthcare data ETL pipelines and transformations",
+      "Built Python and SQL logic for data normalization and compliance",
+      "Developed REST APIs to expose datasets to reporting systems",
+      "Designed relational schemas and optimized complex SQL queries",
+      "Implemented data validation and reconciliation checks",
+      "Created batch and near-real-time data processing workflows",
+      "Performed root-cause analysis on data discrepancies"
+    ],
+    "technologies": ["Python", "Java", "Spring Boot", "SQL", "Pandas", "MySQL", "PostgreSQL", "AWS S3", "Jenkins", "Splunk", "REST APIs", "Data Pipeline"]
   }
 ]
